@@ -15,7 +15,7 @@
 https://github.com/user-attachments/assets/674e7652-5fcb-4568-b28b-76c239419254
 
 
-**Important:** Please note that due to ethical restrictions, the mesh file is not included. Interested parties should contact the authors directly for access. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
+**Important:** Please note that due to ethical restrictions, patient-specific mesh files are not included. Interested parties should contact the authors directly for access. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
 
 ---
 
