@@ -68,42 +68,42 @@ Before installing and running the framework, ensure your system meets the follow
 3. **Download Required Repositories:**
 
    - **Artisynth Core:**  
-     The current development version of Artisynth Core is available from GitHub. To clone it, run:
+     The current development version of `artisynth_core` is available from GitHub. To clone it, run:
      ```bash
      git clone https://github.com/artisynth/artisynth_core.git
      ```
 
    - **Artisynth Models:**  
-     The current development version of artisynth_models is available from GitHub. To clone it, run:
+     The current development version of `artisynth_models` is available from GitHub. To clone it, run:
      ```bash
      git clone https://github.com/artisynth/artisynth_models.git
      ```
 
-   - **Artisynth_VSP & Artisynth_JawModel:**  
+   - **Artisynth VSP & Artisynth Jaw Model:**  
      These components are included in this repository. You can find them in the `Artisynth_VSP` and `Artisynth_JawModel` directories.
 
 For more information on additional details, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
 
 
 4. **Configure Projects:**  
-   - **Run Configuration:** Set the run configuration for Artisynth Core so that it has access to the three supporting libraries.
+   - **Run Configuration:** Set the run configuration for `artisynth_core` so that it has access to the three supporting libraries.
    - **Build Configuration:** Adjust the build settings for each supporting library to ensure they are visible during runtime.
 
 5. **Launch Artisynth Core:**  
-   - Launch the Artisynth Core application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
+   - Launch the `artisynth_core` application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
    - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `Artisynth_VSP` and `Artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
 
 ### 3.3 MATLAB Integration
 
 6. **Set External Class Path:**  
-    In MATLAB, add the Artisynth Core MATLAB folder to your path so that Java classes are available. For example:
+    In MATLAB, add the `artisynth_core` MATLAB folder to your path so that Java classes are available. For example:
   
 ```matlab
 addpath(fullfile('path','to','artisynth_core','matlab'));
 ```
 
 7. **Environment Variable:**  
- - Set the `ARTISYNTH_HOME` environment variable to the path where Artisynth Core is installed
+ - Set the `ARTISYNTH_HOME` environment variable to the path where `artisynth_core` is installed
  - Then set the Artisynth class path in MATLAB using:
 
 ```matlab
