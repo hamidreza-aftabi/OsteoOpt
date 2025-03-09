@@ -1,10 +1,3 @@
-every time 
-
-same directoy 
-
-
-
-
 # OsteoOpt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery
 
 **Paper Submitted to MICCAI 2025**  
