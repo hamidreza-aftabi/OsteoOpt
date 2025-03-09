@@ -80,7 +80,7 @@ Before installing and running the framework, ensure your system meets the follow
      ```
 
    - **Artisynth VSP & Artisynth Jaw Model:**  
-     These components are included in this repository. You can find them in the `Artisynth_VSP` and `Artisynth_JawModel` directories.
+     These components are included in this repository. You can find them in the `artisynth_VSP` and `artisynth_JawModel` directories.
 
 For more information on additional details, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
 
@@ -91,7 +91,7 @@ For more information on additional details, visit [Artisynth Webpage](https://ww
 
 5. **Launch Artisynth Core:**  
    - Launch the `artisynth_core` application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
-   - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `Artisynth_VSP` and `Artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
+   - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `artisynth_VSP` and `artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
 
 ### 3.3 MATLAB Integration
 
