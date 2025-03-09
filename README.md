@@ -141,7 +141,11 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 ## 4. Configuration and Execution
 
 - **Running the Framework:**  
-   -   
+  - Locate the `matlab` folder within `Artisynth_JawModel`.
+  - To run the optimization for a one-segment case, execute `MainOneSegment.m`. The defect type can be chosen within the code (options: Body       (B) or Symphysis (S)).
+  - To run the optimization for a two-segment case (e.g., Ramus and Body (RB)), execute `MainTwoSegment.m`.
+  - To test the three-stage workflow for a single iteration, you can run `BDefectManual.m`, `SDefectManual.m`, or `RBDefectManual.m`.
+
 ---
 
 ## 5. Troubleshooting
@@ -149,6 +153,8 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 - **Java/Eclipse Issues:**  
   - Confirm Eclipse is set to use Java 8.  
   - Verify Java 8 installation if conflicts occur.
+  - Ensure that `Artisynth_JawModel` and `Artisynth_VSP` are located within the same folder.
+
 
 - **Artisynth Configuration Errors:**  
   - Double-check run configurations to ensure proper library inclusion.  
