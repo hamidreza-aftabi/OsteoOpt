@@ -1,0 +1,1240 @@
+[
+  NumericInputProbe [ 
+    startTime=0.105
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Right Inferior Lateral Pterygoid "
+    scale=0.12309515968063864
+    attachedFile="lip2.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=0
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rip:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.02553193 0.029402999999999378
+      1.1904029946871766 0.14455902393724795
+      2.8700126995197683 0.6111631926987491
+      3.3051609512838183 0.3823989924964244
+      4.638998420796049 0.0
+      4.850601857534114 0.013901425312500212
+      5.502131164563108 -0.004336942499999817
+      6.012769787724418 0.0
+      6.33191864 0.0
+      7.212770225 0.0
+      7.902132335 0.3528360000000003
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rip:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.0
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Left Inferior Lateral Pterygoid "
+    scale=0.0616995948223314
+    attachedFile="rip.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=1
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lip:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.05580032 0.07922218052227255
+      1.722289414934026 0.0923799723470492
+      4.039034799966497 0.19286362416224423
+      5.790905315614616 0.3946477181216832
+      8.175395739691222 0.22168992329930692
+      10.252334117 0.0
+      12.91777408 0.0
+      15.59618944 0.0
+      17.9956032 0.2904813285816656
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lip:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.09999999999999999
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Rightt Superior Lateral Pterygoid "
+    scale=0.12423936558021674
+    attachedFile="lsp2.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=2
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rsp:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      1.2913424898668933 0.3289035792958861
+      2.9055206022005096 0.6410414493908227
+      3.3555094368796947 0.4420617435148815
+      3.7597876822868868 0.28707889449123736
+      4.559848470842714 0.0
+      4.790119667724644 0.0
+      5.184001896 0.0
+      5.971767225014808 0.0
+      7.064473172 0.0
+      8.068238245 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rsp:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.002
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Left Superior Lateral Pterygoid "
+    scale=0.24590380761523045
+    attachedFile="rsp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=3
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lsp:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.10562957402969675
+      0.40767973856209144 0.12361896198467781
+      1.017503507226518 0.1570851458955581
+      1.4407849662327492 0.38567222497472875
+      2.039077028481942 0.2856653778775916
+      2.50198861 0.0
+      3.205882167 0.0
+      4.242198565 0.0
+      4.735293843 0.330092418842802
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lsp:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.002
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Right Anterior Digastric "
+    scale=0.11285764049999997
+    attachedFile="lad.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=4
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rad:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.011560666666666665 0.026049361325966677
+      1.6069517590135869 0.10246618799999985
+      2.9694171 0.2299968000000002
+      4.221140814 0.07187399999999974
+      4.84243404 0.014374799999999695
+      5.238356648334958 0.0
+      5.926652254 0.0
+      8.36005122 0.0
+      9.828009673 0.2156219999999999
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rad:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.0
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Left Anterior Digastric "
+    scale=0.11316728594603616
+    attachedFile="rad.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=5
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lad:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.017341028571428576 0.02610233572205444
+      1.7036725621566704 0.09307024740958227
+      3.011849676 0.24486855797793294
+      4.4207072 0.0
+      5.825951646 0.0
+      8.6713872 0.0
+      9.8615776 0.14404032822231314
+      10.4991796 0.36010082055578396
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lad:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.095
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Right Mylohyoid "
+    scale=0.10424538373452295
+    attachedFile="lam.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=6
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/exciters/rmy:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.017341028571428576 0.053282784530386366
+      0.9517723810931118 0.07215969710812473
+      1.794940716 0.32343299999999964
+      3.261535310435067 0.6471063070776564
+      4.311587440581059 0.6193006875000001
+      5.460878958 0.08820899999999944
+      8.89864677 0.0
+      9.826539852 0.32343299999999964
+      10.511051142 0.5292539999999992
+    ]
+    plotTraceInfo=[
+      [ order=0 label="exciters/rmy:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.0
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Left Mylohyoid "
+    scale=0.11316728594603616
+    attachedFile="ram.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=7
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/exciters/lmy:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.017341028571428576 0.01993928423212492
+      1.886208888 0.1760492900494946
+      3.057483762 0.14304004816521412
+      4.593831324 0.04401232251237365
+      5.483696059441783 0.0
+      5.947642542 0.0
+      8.913858132 0.0
+      9.750483042 0.1760492900494946
+      10.4354194 0.33009241884280194
+    ]
+    plotTraceInfo=[
+      [ order=0 label="exciters/lmy:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.002
+    stopTime=1.2049999999999998
+    updateInterval=-1.0
+    name="Right Geniohyoid "
+    scale=0.11297945642579381
+    attachedFile="lgh.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=8
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rgh:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.017341028571428576 0.017043670853303747
+      0.9517723810931117 0.04352101902720029
+      1.718883906 0.28215589247999984
+      2.601142902 0.3291818745600001
+      4.380872256 0.018810392832000016
+      5.93243118 0.0
+      8.6713872 0.0
+      9.6915504 0.18810392831999975
+      10.307899 0.23512991039999995
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rgh:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.002
+    stopTime=1.21
+    updateInterval=-1.0
+    name="Left Geniohyoid "
+    scale=0.11344903022639974
+    attachedFile="rgh.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=9
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lgh:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.017341028571428576 0.013413866068616604
+      0.9005731827320708 0.017467373363815316
+      1.67324982 0.2146627530310032
+      2.555508816 0.2516735725191071
+      4.350449532 0.014804327795241613
+      5.93243118 0.0
+      8.6713872 0.0
+      9.6277902 0.18505409744051995
+      10.3716592 0.25907573641672765
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lgh:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.47
+    stopTime=1.309
+    updateInterval=-1.0
+    name="Right Anterior Temporal "
+    scale=0.19381962025316457
+    attachedFile="lat.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=10
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rat:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.36073059360730586 0.08114797499999983
+      0.686418783 0.23537249999999993
+      1.032720151 0.042248249999999966
+      1.614011733 -0.0031927500000001434
+      2.152015644 5.939999999999346E-4
+      3.370254385 -0.006979500000000221
+      3.961971237536656 5.642618741976587E-4
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rat:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.472
+    stopTime=1.2859999999999998
+    updateInterval=-1.0
+    name="Left Anterior Temporal "
+    scale=0.2593384146341464
+    attachedFile="rat.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=11
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lat:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.004483937 6.71999999999926E-4
+      0.282488031 0.07778399999999984
+      0.556008188 0.24485999999999986
+      0.802624723 0.03922799999999997
+      1.282405982 -0.003612000000000162
+      1.874285666 -0.00789600000000025
+      3.199999968 -0.012179999999999965
+      3.999999744 -0.010080000000000009
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lat:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.45999999999999996
+    stopTime=1.302
+    updateInterval=-1.0
+    name="Right Middle Temporal "
+    scale=0.1946744594904
+    attachedFile="lmt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=12
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rmt:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.4119208878267395 0.07617786562499985
+      0.721053099 0.25430624999999984
+      1.0040571640776776 0.08490823453124985
+      1.368152034 -0.0028572151898735125
+      1.8488541 -0.0028572151898735125
+      2.871886702 -0.006979500000000221
+      3.999999961 -0.005940000000000005
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rmt:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.45399999999999996
+    stopTime=1.2700000000000002
+    updateInterval=-1.0
+    name="Left Middle Temporal "
+    scale=0.20399999999999988
+    attachedFile="rmt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=13
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lmt:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.39263803680981635 0.037575824999999875
+      0.7999999 0.27587999999999996
+      1.057142725 0.06779999999999986
+      1.571428375 0.006599999999999939
+      2.15999973 -0.005640000000000178
+      2.897142495 -0.0025800000000001156
+      4.0 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lmt:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.444
+    stopTime=1.2180000000000002
+    updateInterval=-1.0
+    name="Right Posterior Temporal "
+    scale=0.17982075471698108
+    attachedFile="lpt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=14
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rpt:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.011428562130177518 0.0013503836317135197
+      0.4165438295726287 0.07304766943734016
+      0.795978878 0.23099999999999993
+      1.0232411730759148 0.13254228740409205
+      1.396851308 0.016499999999999942
+      2.033469382 0.006600000000000007
+      2.799883374 0.00329999999999993
+      3.996187224852072 6.751918158567599E-4
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rpt:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.446
+    stopTime=1.256
+    updateInterval=-1.0
+    name="Left Posterior Temporal "
+    scale=0.20249999999999999
+    attachedFile="rpt.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=15
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lpt:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.004012034985422742 0.0012219428571428564
+      0.497142795 0.03226229999999997
+      0.817142755 0.2202227999999999
+      1.114285575 0.029370599999999907
+      1.57714266 -0.005329800000000168
+      1.853658506 -0.008221499999999975
+      2.59428539 -0.008221499999999975
+      3.959999505 -0.005329800000000168
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lpt:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.44999999999999996
+    stopTime=1.282
+    updateInterval=-1.0
+    name="Right Superficial Masseter "
+    scale=0.20799999999999993
+    attachedFile="lsm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=16
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rsm:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.424691349 0.08644499999999981
+      0.70857134 0.14412366412213728
+      1.114285575 0.03962699999999988
+      1.67999979 -0.0028030534351146303
+      2.497142545 -0.006774045801526685
+      3.754285245 -0.003289500000000147
+      4.0 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rsm:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.486
+    stopTime=1.277
+    updateInterval=-1.0
+    name="Left Superficial Masseter "
+    scale=0.19774999999999993
+    attachedFile="rsm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ 0.0 1.0 ]
+    track=17
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lsm:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.00398009384164223 0.0015286624203821656
+      0.32323232323232337 0.0680904936305733
+      0.508571365 0.13199999999999984
+      0.77714276 0.37799999999999995
+      0.97142845 0.16799999999999987
+      1.2571427 0.02400000000000002
+      1.72571407 0.01799999999999988
+      3.16571389 0.01200000000000001
+      3.968188480938418 0.0015286624203821656
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lsm:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.47
+    stopTime=1.258
+    updateInterval=-1.0
+    name="Right Deep Masseter "
+    scale=0.18099375000000004
+    attachedFile="ldm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=18
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rdm:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.01243926 -0.003870000000000173
+      0.44781336 0.023669999999999792
+      0.754295592 0.28529999999999994
+      1.13819229 0.05579999999999985
+      1.654421694 -0.013049999999999961
+      2.02759938 -0.008460000000000268
+      2.93566536 7.199999999999207E-4
+      4.0 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rdm:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.476
+    stopTime=1.284
+    updateInterval=-1.0
+    name="Left Deep Masseter "
+    scale=0.2582298985525857
+    attachedFile="rdm.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=19
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/ldm:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.339719392 0.1570799999999997
+      0.522976413 0.43668749999999973
+      0.764368632 0.11806499999999973
+      1.126437984 -0.005482500000000245
+      1.872926648 -0.005482500000000245
+      3.54285701 0.014024999999999871
+      4.0 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/ldm:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.418
+    stopTime=1.2360000000000002
+    updateInterval=-1.0
+    name="Right Medial Pterygoid "
+    scale=0.28751485148514844
+    attachedFile="lmp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=20
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/rmp:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.224374625 0.15497999999999992
+      0.385900476 0.25136999999999976
+      0.60533408 -0.037800000000000035
+      1.109577378 0.0055754999999998054
+      2.76378248 -0.01370249999999996
+      2.977375317 -0.037800000000000035
+      4.0 0.0
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rmp:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.42
+    stopTime=1.3
+    updateInterval=-1.0
+    name="Left Medial Pterygoid "
+    scale=0.2660465116279069
+    attachedFile="rmp.txt"
+    interpolationOrder=Cubic
+    displayRange=[ -0.020000000000000004 1.0 ]
+    track=21
+    model=models/jawmodel
+    vsize=1
+    props=[
+      "models/jawmodel/axialSprings/lmp:excitation"
+    ]
+    drivers=[
+      "V0"
+    ]
+    inputs=[
+      V0 1
+    ]
+    data=[
+      0.0 0.0
+      0.406531972 0.07809374999999992
+      0.637516047 0.2829224999999999
+      0.997851204 -0.03570000000000003
+      1.587692064 -0.0038377500000001718
+      3.213723384 -0.001428000000000239
+      3.581227384 -0.03570000000000003
+      3.9835864335260127 0.0016249655172413397
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lmp:excitation" visible=true color=Red ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="Muscle Forces"
+    attachedFile=""
+    format="%8.2f"
+    displayRange=[ 0.0 10.0 ]
+    showHeader=false
+    track=0
+    model=null
+    vsize=18
+    props=[
+      "models/jawmodel/axialSprings/lad:forceNorm"
+      "models/jawmodel/axialSprings/lip:forceNorm"
+      "models/jawmodel/axialSprings/lsp:forceNorm"
+      "models/jawmodel/axialSprings/lat:forceNorm"
+      "models/jawmodel/axialSprings/lmt:forceNorm"
+      "models/jawmodel/axialSprings/lpt:forceNorm"
+      "models/jawmodel/axialSprings/ldm:forceNorm"
+      "models/jawmodel/axialSprings/lsm:forceNorm"
+      "models/jawmodel/axialSprings/lmp:forceNorm"
+      "models/jawmodel/axialSprings/rad:forceNorm"
+      "models/jawmodel/axialSprings/rip:forceNorm"
+      "models/jawmodel/axialSprings/rsp:forceNorm"
+      "models/jawmodel/axialSprings/rat:forceNorm"
+      "models/jawmodel/axialSprings/rmt:forceNorm"
+      "models/jawmodel/axialSprings/rpt:forceNorm"
+      "models/jawmodel/axialSprings/rdm:forceNorm"
+      "models/jawmodel/axialSprings/rsm:forceNorm"
+      "models/jawmodel/axialSprings/rmp:forceNorm"
+    ]
+    variables=[
+      P0
+      P1
+      P2
+      P3
+      P4
+      P5
+      P6
+      P7
+      P8
+      P9
+      P10
+      P11
+      P12
+      P13
+      P14
+      P15
+      P16
+      P17
+    ]
+    drivers=[
+      "P0"
+      "P1"
+      "P2"
+      "P3"
+      "P4"
+      "P5"
+      "P6"
+      "P7"
+      "P8"
+      "P9"
+      "P10"
+      "P11"
+      "P12"
+      "P13"
+      "P14"
+      "P15"
+      "P16"
+      "P17"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/lad:forceNorm" visible=true color=Red ]
+      [ order=1 label="axialSprings/lip:forceNorm" visible=true color=Green ]
+      [ order=2 label="axialSprings/lsp:forceNorm" visible=true color=Blue ]
+      [ order=3 label="axialSprings/lat:forceNorm" visible=true color=Cyan ]
+      [ order=4 label="axialSprings/lmt:forceNorm" visible=true color=Magenta ]
+      [ order=5 label="axialSprings/lpt:forceNorm" visible=true color=Gold1 ]
+      [ order=6 label="axialSprings/ldm:forceNorm" visible=true color=Teal ]
+      [ order=7 label="axialSprings/lsm:forceNorm" visible=true color=Ocean ]
+      [ order=8 label="axialSprings/lmp:forceNorm" visible=true color=DarkViolet ]
+      [ order=9 label="axialSprings/rad:forceNorm" visible=true color=DeepPink ]
+      [ order=10 label="axialSprings/rip:forceNorm" visible=true color=Orange ]
+      [ order=11 label="axialSprings/rsp:forceNorm" visible=true color=DarkOliveGreen4 ]
+      [ order=12 label="axialSprings/rat:forceNorm" visible=true color=WebBlue ]
+      [ order=13 label="axialSprings/rmt:forceNorm" visible=true color=MediumPurple1 ]
+      [ order=14 label="axialSprings/rpt:forceNorm" visible=true color=WebMaroon ]
+      [ order=15 label="axialSprings/rdm:forceNorm" visible=true color=Gold3 ]
+      [ order=16 label="axialSprings/rsm:forceNorm" visible=true color=Chartreuse3 ]
+      [ order=17 label="axialSprings/rmp:forceNorm" visible=true color=SteelBlue ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="Incisor Displacement"
+    attachedFile=""
+    format="%8.2f"
+    displayRange=[ -25.0 8.5 ]
+    showHeader=false
+    track=1
+    model=null
+    vsize=3
+    props=[
+      "models/jawmodel/frameMarkers/lowerincisor:displacement"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="frameMarkers/lowerincisor:displacement.x" visible=true color=Red ]
+      [ order=1 label="frameMarkers/lowerincisor:displacement.y" visible=true color=Green ]
+      [ order=2 label="frameMarkers/lowerincisor:displacement.z" visible=true color=Blue ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="Jaw Pose"
+    attachedFile=""
+    format="%8.2f"
+    displayRange=[ 0.0 10.0 ]
+    showHeader=false
+    track=2
+    model=null
+    vsize=16
+    props=[
+      "models/jawmodel/rigidBodies/jaw:pose"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="rigidBodies/jaw:pose[0]" visible=true color=Red ]
+      [ order=1 label="rigidBodies/jaw:pose[1]" visible=true color=Green ]
+      [ order=2 label="rigidBodies/jaw:pose[2]" visible=true color=Blue ]
+      [ order=3 label="rigidBodies/jaw:pose[3]" visible=true color=Cyan ]
+      [ order=4 label="rigidBodies/jaw:pose[4]" visible=true color=Magenta ]
+      [ order=5 label="rigidBodies/jaw:pose[5]" visible=true color=Gold1 ]
+      [ order=6 label="rigidBodies/jaw:pose[6]" visible=true color=Teal ]
+      [ order=7 label="rigidBodies/jaw:pose[7]" visible=true color=Ocean ]
+      [ order=8 label="rigidBodies/jaw:pose[8]" visible=true color=DarkViolet ]
+      [ order=9 label="rigidBodies/jaw:pose[9]" visible=true color=DeepPink ]
+      [ order=10 label="rigidBodies/jaw:pose[10]" visible=true color=Orange ]
+      [ order=11 label="rigidBodies/jaw:pose[11]" visible=true color=DarkOliveGreen4 ]
+      [ order=12 label="rigidBodies/jaw:pose[12]" visible=true color=WebBlue ]
+      [ order=13 label="rigidBodies/jaw:pose[13]" visible=true color=MediumPurple1 ]
+      [ order=14 label="rigidBodies/jaw:pose[14]" visible=true color=WebMaroon ]
+      [ order=15 label="rigidBodies/jaw:pose[15]" visible=true color=Gold3 ]
+    ]
+  ]
+  PointTracingProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="incisor_trace"
+    attachedFile=""
+    displayRange=[ -96.73724445230043 10.887898191067048 ]
+    renderProps=maspack.render.PointLineRenderProps [ 
+      lineWidth=3
+    ]
+    renderInterval=0.05
+    track=3
+    model=null
+    vsize=3
+    props=[
+      "models/jawmodel/frameMarkers/lowerincisor:position"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="frameMarkers/lowerincisor:position.x" visible=true color=Red ]
+      [ order=1 label="frameMarkers/lowerincisor:position.y" visible=true color=Green ]
+      [ order=2 label="frameMarkers/lowerincisor:position.z" visible=true color=Blue ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="Left Condyle Displacement"
+    attachedFile=""
+    displayRange=[ -1.2 1.2 ]
+    track=4
+    model=null
+    vsize=3
+    props=[
+      "models/jawmodel/frameMarkers/CondyleLeft:displacement"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="frameMarkers/CondyleLeft:displacement.x" visible=true color=Red ]
+      [ order=1 label="frameMarkers/CondyleLeft:displacement.y" visible=true color=Green ]
+      [ order=2 label="frameMarkers/CondyleLeft:displacement.z" visible=true color=Blue ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.001
+    name="Right Condyle Displacement"
+    attachedFile=""
+    displayRange=[ -1.2 1.2 ]
+    track=5
+    model=null
+    vsize=3
+    props=[
+      "models/jawmodel/frameMarkers/CondyleRight:displacement"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="frameMarkers/CondyleRight:displacement.x" visible=true color=Red ]
+      [ order=1 label="frameMarkers/CondyleRight:displacement.y" visible=true color=Green ]
+      [ order=2 label="frameMarkers/CondyleRight:displacement.z" visible=true color=Blue ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.01
+    name="LeftPerc"
+    attachedFile=""
+    displayRange=[ -1.2 1.2 ]
+    track=6
+    model=null
+    vsize=1
+    props=[
+      "percMechanicalStimLeftBuiltin"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="JawFemDemoOptimize:percMechanicalStimLeftBuiltin" visible=true color=Red ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.01
+    name="RightPerc"
+    attachedFile=""
+    displayRange=[ -1.2 1.2 ]
+    track=7
+    model=null
+    vsize=1
+    props=[
+      "percMechanicalStimRightBuiltin"
+    ]
+    variables=[
+      P0
+    ]
+    drivers=[
+      "P0"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="JawFemDemoOptimize:percMechanicalStimRightBuiltin" visible=true color=Red ]
+    ]
+  ]
+  WayPointProbe [ 
+    startTime=0.0
+    stopTime=Infinity
+    updateInterval=-1.0
+    name="WayPoints"
+    track=0
+    model=.
+    wayPoints=[
+      [ time=0.0
+      ]
+      [ time=0.01
+      ]
+      [ time=0.02
+      ]
+      [ time=0.03
+      ]
+      [ time=0.04
+      ]
+      [ time=0.05
+      ]
+      [ time=0.06
+      ]
+      [ time=0.07
+      ]
+      [ time=0.08
+      ]
+      [ time=0.09
+      ]
+      [ time=0.1
+      ]
+      [ time=0.11
+      ]
+      [ time=0.12
+      ]
+      [ time=0.13
+      ]
+      [ time=0.14
+      ]
+      [ time=0.15
+      ]
+      [ time=0.16
+      ]
+      [ time=0.17
+      ]
+      [ time=0.18
+      ]
+      [ time=0.19
+      ]
+      [ time=0.2
+      ]
+      [ time=0.21
+      ]
+      [ time=0.22
+      ]
+      [ time=0.23
+      ]
+      [ time=0.24
+      ]
+      [ time=0.25
+      ]
+      [ time=0.26
+      ]
+      [ time=0.27
+      ]
+      [ time=0.28
+      ]
+      [ time=0.29
+      ]
+      [ time=0.3
+      ]
+      [ time=0.31
+      ]
+      [ time=0.32
+      ]
+      [ time=0.33
+      ]
+      [ time=0.34
+      ]
+      [ time=0.35
+      ]
+      [ time=0.36
+      ]
+      [ time=0.37
+      ]
+      [ time=0.38
+      ]
+      [ time=0.39
+      ]
+      [ time=0.4
+      ]
+      [ time=0.41
+      ]
+      [ time=0.42
+      ]
+      [ time=0.43
+      ]
+      [ time=0.44
+      ]
+      [ time=0.45
+      ]
+      [ time=0.46
+      ]
+      [ time=0.47
+      ]
+      [ time=0.48
+      ]
+      [ time=0.49
+      ]
+      [ time=0.5
+      ]
+      [ time=0.51
+      ]
+      [ time=0.52
+      ]
+      [ time=0.53
+      ]
+      [ time=0.54
+      ]
+      [ time=0.55
+      ]
+      [ time=0.56
+      ]
+      [ time=0.57
+      ]
+      [ time=0.58
+      ]
+      [ time=0.59
+      ]
+      [ time=0.6
+      ]
+      [ time=0.61
+      ]
+      [ time=0.62
+      ]
+      [ time=0.63
+      ]
+      [ time=0.64
+      ]
+      [ time=0.65
+      ]
+      [ time=0.66
+      ]
+      [ time=0.67
+      ]
+      [ time=0.68
+      ]
+      [ time=0.69
+      ]
+      [ time=0.7
+        breakpoint=true
+      ]
+    ]
+  ]
+]

@@ -1,0 +1,12 @@
+rsm
+lsm
+rdm
+ldm
+rat
+lat
+rmp
+lmp
+rpt
+lpt
+rmt
+lmt

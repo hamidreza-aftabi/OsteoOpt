@@ -1,0 +1,734 @@
+[
+  NumericInputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=0.7
+    name="target positions"
+    attachedFile="/Users/hamidreza/Desktop/JAVA_ArtiSynth/artisynth_TMJ_Final/src/artisynth/istar/TMJModel/JawTMJ/data/Inverse_Targets.txt"
+    displayRange=[ -115.536241683 70.958174313 ]
+    track=0
+    model=null
+    vsize=30
+    props=[
+      "controllers/incisor_disp/motionTerm/targetPoints/lowerincisor_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/lbite_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/rbite_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleLeft_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleRight_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/lowerincisor_ref:subWeights"
+      "controllers/incisor_disp/motionTerm/targetPoints/lbite_ref:subWeights"
+      "controllers/incisor_disp/motionTerm/targetPoints/rbite_ref:subWeights"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleLeft_ref:subWeights"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleRight_ref:subWeights"
+    ]
+    drivers=[
+      "V0"
+      "V1"
+      "V2"
+      "V3"
+      "V4"
+      "V6"
+      "V8"
+      "V10"
+      "V12"
+      "V14"
+    ]
+    inputs=[
+      V0 3
+      V1 3
+      V2 3
+      V3 3
+      V4 3
+      V6 3
+      V8 3
+      V10 3
+      V12 3
+      V14 3
+      
+    ]
+    data=[
+      
+    ]
+    plotTraceInfo=[
+      [ order=0 label="targetPoints/lowerincisor_ref:position.x" visible=true color=Red ]
+      [ order=1 label="targetPoints/lowerincisor_ref:position.y" visible=true color=DarkGreen ]
+      [ order=2 label="targetPoints/lowerincisor_ref:position.z" visible=true color=Blue ]
+      [ order=3 label="targetPoints/lbite_ref:position.x" visible=true color=Cyan ]
+      [ order=4 label="targetPoints/lbite_ref:position.y" visible=true color=Magenta ]
+      [ order=5 label="targetPoints/lbite_ref:position.z" visible=true color=DarkOrange ]
+      [ order=6 label="targetPoints/rbite_ref:position.x" visible=true color=Pink ]
+      [ order=7 label="targetPoints/rbite_ref:position.y" visible=true color=BlueViolet ]
+      [ order=8 label="targetPoints/rbite_ref:position.z" visible=true color=NavajoWhite ]
+      [ order=9 label="targetPoints/CondyleLeft_ref:position.x" visible=true color=Gray ]
+      [ order=10 label="targetPoints/CondyleLeft_ref:position.y" visible=true color=DarkOliveGreen ]
+      [ order=11 label="targetPoints/CondyleLeft_ref:position.z" visible=true color=IndianRed ]
+      [ order=12 label="targetPoints/CondyleRight_ref:position.x" visible=true color=PeachPuff ]
+      [ order=13 label="targetPoints/CondyleRight_ref:position.y" visible=true color=Red ]
+      [ order=14 label="targetPoints/CondyleRight_ref:position.z" visible=true color=DarkGreen ]
+      [ order=15 label="targetPoints/lowerincisor_ref:subWeights.x" visible=true color=Blue ]
+      [ order=16 label="targetPoints/lowerincisor_ref:subWeights.y" visible=true color=Cyan ]
+      [ order=17 label="targetPoints/lowerincisor_ref:subWeights.z" visible=true color=Magenta ]
+      [ order=18 label="targetPoints/lbite_ref:subWeights.x" visible=true color=Blue ]
+      [ order=19 label="targetPoints/lbite_ref:subWeights.y" visible=true color=Cyan ]
+      [ order=20 label="targetPoints/lbite_ref:subWeights.z" visible=true color=Magenta ]
+      [ order=21 label="targetPoints/rbite_ref:subWeights.x" visible=true color=Blue ]
+      [ order=22 label="targetPoints/rbite_ref:subWeights.y" visible=true color=Cyan ]
+      [ order=23 label="targetPoints/rbite_ref:subWeights.z" visible=true color=Magenta ]
+      [ order=24 label="targetPoints/CondyleLeft_ref:subWeights.x" visible=true color=Blue ]
+      [ order=25 label="targetPoints/CondyleLeft_ref:subWeights.y" visible=true color=Cyan ]
+      [ order=26 label="targetPoints/CondyleLeft_ref:subWeights.z" visible=true color=Magenta ]
+      [ order=27 label="targetPoints/CondyleRight_ref:subWeights.x" visible=true color=Blue ]
+      [ order=28 label="targetPoints/CondyleRight_ref:subWeights.y" visible=true color=Cyan ]
+      [ order=29 label="targetPoints/CondyleRight_ref:subWeights.z" visible=true color=Magenta ]
+    ]
+  ]
+  NumericInputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=-1.0
+    name="input excitations"
+    active=false
+    attachedFile="input_excitations.txt"
+    displayRange=[ -1.2 1.2 ]
+    track=1
+    model=models/jawmodel
+    vsize=24
+    props=[
+      "models/jawmodel/axialSprings/rat:excitation"
+      "models/jawmodel/axialSprings/lat:excitation"
+      "models/jawmodel/axialSprings/rmt:excitation"
+      "models/jawmodel/axialSprings/lmt:excitation"
+      "models/jawmodel/axialSprings/rpt:excitation"
+      "models/jawmodel/axialSprings/lpt:excitation"
+      "models/jawmodel/axialSprings/rsm:excitation"
+      "models/jawmodel/axialSprings/lsm:excitation"
+      "models/jawmodel/axialSprings/rdm:excitation"
+      "models/jawmodel/axialSprings/ldm:excitation"
+      "models/jawmodel/axialSprings/rmp:excitation"
+      "models/jawmodel/axialSprings/lmp:excitation"
+      "models/jawmodel/axialSprings/rsp:excitation"
+      "models/jawmodel/axialSprings/lsp:excitation"
+      "models/jawmodel/axialSprings/rip:excitation"
+      "models/jawmodel/axialSprings/lip:excitation"
+      "models/jawmodel/axialSprings/rad:excitation"
+      "models/jawmodel/axialSprings/lad:excitation"
+      "models/jawmodel/axialSprings/ram:excitation"
+      "models/jawmodel/axialSprings/lam:excitation"
+      "models/jawmodel/axialSprings/rgh:excitation"
+      "models/jawmodel/axialSprings/lgh:excitation"
+      "models/jawmodel/axialSprings/rpm:excitation"
+      "models/jawmodel/axialSprings/lpm:excitation"
+    ]
+    drivers=[
+      "V0"
+      "V1"
+      "V2"
+      "V3"
+      "V4"
+      "V5"
+      "V6"
+      "V7"
+      "V8"
+      "V9"
+      "V10"
+      "V11"
+      "V12"
+      "V13"
+      "V14"
+      "V15"
+      "V16"
+      "V17"
+      "V18"
+      "V19"
+      "V20"
+      "V21"
+      "V22"
+      "V23"
+    ]
+    inputs=[
+      V0 1
+      V1 1
+      V2 1
+      V3 1
+      V4 1
+      V5 1
+      V6 1
+      V7 1
+      V8 1
+      V9 1
+      V10 1
+      V11 1
+      V12 1
+      V13 1
+      V14 1
+      V15 1
+      V16 1
+      V17 1
+      V18 1
+      V19 1
+      V20 1
+      V21 1
+      V22 1
+      V23 1
+          
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rat:excitation" visible=true color=Red ]
+      [ order=1 label="axialSprings/lat:excitation" visible=true color=DarkGreen ]
+      [ order=2 label="axialSprings/rmt:excitation" visible=true color=Blue ]
+      [ order=3 label="axialSprings/lmt:excitation" visible=true color=Cyan ]
+      [ order=4 label="axialSprings/rpt:excitation" visible=true color=Magenta ]
+      [ order=5 label="axialSprings/lpt:excitation" visible=true color=DarkOrange ]
+      [ order=6 label="axialSprings/rsm:excitation" visible=true color=Pink ]
+      [ order=7 label="axialSprings/lsm:excitation" visible=true color=BlueViolet ]
+      [ order=8 label="axialSprings/rdm:excitation" visible=true color=NavajoWhite ]
+      [ order=9 label="axialSprings/ldm:excitation" visible=true color=Gray ]
+      [ order=10 label="axialSprings/rmp:excitation" visible=true color=DarkOliveGreen ]
+      [ order=11 label="axialSprings/lmp:excitation" visible=true color=IndianRed ]
+      [ order=12 label="axialSprings/rsp:excitation" visible=true color=PeachPuff ]
+      [ order=13 label="axialSprings/lsp:excitation" visible=true color=Red ]
+      [ order=14 label="axialSprings/rip:excitation" visible=true color=DarkGreen ]
+      [ order=15 label="axialSprings/lip:excitation" visible=true color=Blue ]
+      [ order=16 label="axialSprings/rad:excitation" visible=true color=Cyan ]
+      [ order=17 label="axialSprings/lad:excitation" visible=true color=Magenta ]
+      [ order=18 label="axialSprings/ram:excitation" visible=true color=DarkOrange ]
+      [ order=19 label="axialSprings/lam:excitation" visible=true color=Pink ]
+      [ order=20 label="axialSprings/rgh:excitation" visible=true color=BlueViolet ]
+      [ order=21 label="axialSprings/lgh:excitation" visible=true color=NavajoWhite ]
+      [ order=22 label="axialSprings/rpm:excitation" visible=true color=Red ]
+      [ order=23 label="axialSprings/lpm:excitation" visible=true color=DarkGreen ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=-1.0
+    name="tracked positions"
+    attachedFile="tracked_positions.txt"
+    displayRange=[ -1.2 1.2 ]
+    track=0
+    model=null
+    vsize=15
+    props=[
+      "controllers/incisor_disp/motionTerm/targetPoints/lowerincisor_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/lbite_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/rbite_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleLeft_ref:position"
+      "controllers/incisor_disp/motionTerm/targetPoints/CondyleRight_ref:position"
+    ]
+    variables=[
+      P0
+      P1
+      P2
+      P3
+      P4
+    ]
+    drivers=[
+      "P0"
+      "P1"
+      "P2"
+      "P3"
+      "P4"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="targetPoints/lowerincisor_ref:position.x" visible=true color=Red ]
+      [ order=1 label="targetPoints/lowerincisor_ref:position.y" visible=true color=DarkGreen ]
+      [ order=2 label="targetPoints/lowerincisor_ref:position.z" visible=true color=Blue ]
+      [ order=3 label="targetPoints/lbite_ref:position.x" visible=true color=Cyan ]
+      [ order=4 label="targetPoints/lbite_ref:position.y" visible=true color=Magenta ]
+      [ order=5 label="targetPoints/lbite_ref:position.z" visible=true color=DarkOrange ]
+      [ order=6 label="targetPoints/rbite_ref:position.x" visible=true color=Pink ]
+      [ order=7 label="targetPoints/rbite_ref:position.y" visible=true color=BlueViolet ]
+      [ order=8 label="targetPoints/rbite_ref:position.z" visible=true color=NavajoWhite ]
+      [ order=9 label="targetPoints/CondyleLeft_ref:position.x" visible=true color=Gray ]
+      [ order=10 label="targetPoints/CondyleLeft_ref:position.y" visible=true color=DarkOliveGreen ]
+      [ order=11 label="targetPoints/CondyleLeft_ref:position.z" visible=true color=IndianRed ]
+      [ order=12 label="targetPoints/CondyleRight_ref:position.x" visible=true color=PeachPuff ]
+      [ order=13 label="targetPoints/CondyleRight_ref:position.y" visible=true color=Red ]
+      [ order=14 label="targetPoints/CondyleRight_ref:position.z" visible=true color=DarkGreen ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=-1.0
+    name="source positions"
+    attachedFile="source_positions.txt"
+    displayRange=[ -1.2 1.2 ]
+    track=1
+    model=null
+    vsize=15
+    props=[
+      "models/jawmodel/frameMarkers/lowerincisor:position"
+      "models/jawmodel/frameMarkers/lbite:position"
+      "models/jawmodel/frameMarkers/rbite:position"
+      "models/jawmodel/frameMarkers/CondyleLeft:position"
+      "models/jawmodel/frameMarkers/CondyleRight:position"
+    ]
+    variables=[
+      P0
+      P1
+      P2
+      P3
+      P4
+    ]
+    drivers=[
+      "P0"
+      "P1"
+      "P2"
+      "P3"
+      "P4"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="frameMarkers/lowerincisor:position.x" visible=true color=Red ]
+      [ order=1 label="frameMarkers/lowerincisor:position.y" visible=true color=DarkGreen ]
+      [ order=2 label="frameMarkers/lowerincisor:position.z" visible=true color=Blue ]
+      [ order=3 label="frameMarkers/lbite:position.x" visible=true color=Cyan ]
+      [ order=4 label="frameMarkers/lbite:position.y" visible=true color=Magenta ]
+      [ order=5 label="frameMarkers/lbite:position.z" visible=true color=DarkOrange ]
+      [ order=6 label="frameMarkers/rbite:position.x" visible=true color=Pink ]
+      [ order=7 label="frameMarkers/rbite:position.y" visible=true color=BlueViolet ]
+      [ order=8 label="frameMarkers/rbite:position.z" visible=true color=NavajoWhite ]
+      [ order=9 label="frameMarkers/CondyleLeft:position.x" visible=true color=Gray ]
+      [ order=10 label="frameMarkers/CondyleLeft:position.y" visible=true color=DarkOliveGreen ]
+      [ order=11 label="frameMarkers/CondyleLeft:position.z" visible=true color=IndianRed ]
+      [ order=12 label="frameMarkers/CondyleRight:position.x" visible=true color=PeachPuff ]
+      [ order=13 label="frameMarkers/CondyleRight:position.y" visible=true color=Red ]
+      [ order=14 label="frameMarkers/CondyleRight:position.z" visible=true color=DarkGreen ]
+    ]
+  ]
+  NumericOutputProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=-1.0
+    name="computed excitations"
+    attachedFile="computed_excitations.txt"
+    displayRange=[ -1.2 1.2 ]
+    track=2
+    model=models/jawmodel
+    vsize=24
+    props=[
+      "models/jawmodel/axialSprings/rat:excitation"
+      "models/jawmodel/axialSprings/lat:excitation"
+      "models/jawmodel/axialSprings/rmt:excitation"
+      "models/jawmodel/axialSprings/lmt:excitation"
+      "models/jawmodel/axialSprings/rpt:excitation"
+      "models/jawmodel/axialSprings/lpt:excitation"
+      "models/jawmodel/axialSprings/rsm:excitation"
+      "models/jawmodel/axialSprings/lsm:excitation"
+      "models/jawmodel/axialSprings/rdm:excitation"
+      "models/jawmodel/axialSprings/ldm:excitation"
+      "models/jawmodel/axialSprings/rmp:excitation"
+      "models/jawmodel/axialSprings/lmp:excitation"
+      "models/jawmodel/axialSprings/rsp:excitation"
+      "models/jawmodel/axialSprings/lsp:excitation"
+      "models/jawmodel/axialSprings/rip:excitation"
+      "models/jawmodel/axialSprings/lip:excitation"
+      "models/jawmodel/axialSprings/rad:excitation"
+      "models/jawmodel/axialSprings/lad:excitation"
+      "models/jawmodel/axialSprings/ram:excitation"
+      "models/jawmodel/axialSprings/lam:excitation"
+      "models/jawmodel/axialSprings/rgh:excitation"
+      "models/jawmodel/axialSprings/lgh:excitation"
+      "models/jawmodel/axialSprings/rpm:excitation"
+      "models/jawmodel/axialSprings/lpm:excitation"
+    ]
+    variables=[
+      P0
+      P1
+      P2
+      P3
+      P4
+      P5
+      P6
+      P7
+      P8
+      P9
+      P10
+      P11
+      P12
+      P13
+      P14
+      P15
+      P16
+      P17
+      P18
+      P19
+      P20
+      P21
+      P22
+      P23
+    ]
+    drivers=[
+      "P0"
+      "P1"
+      "P2"
+      "P3"
+      "P4"
+      "P5"
+      "P6"
+      "P7"
+      "P8"
+      "P9"
+      "P10"
+      "P11"
+      "P12"
+      "P13"
+      "P14"
+      "P15"
+      "P16"
+      "P17"
+      "P18"
+      "P19"
+      "P20"
+      "P21"
+      "P22"
+      "P23"
+    ]
+    data=[
+    ]
+    plotTraceInfo=[
+      [ order=0 label="axialSprings/rat:excitation" visible=true color=Red ]
+      [ order=1 label="axialSprings/lat:excitation" visible=true color=DarkGreen ]
+      [ order=2 label="axialSprings/rmt:excitation" visible=true color=Blue ]
+      [ order=3 label="axialSprings/lmt:excitation" visible=true color=Cyan ]
+      [ order=4 label="axialSprings/rpt:excitation" visible=true color=Magenta ]
+      [ order=5 label="axialSprings/lpt:excitation" visible=true color=DarkOrange ]
+      [ order=6 label="axialSprings/rsm:excitation" visible=true color=Pink ]
+      [ order=7 label="axialSprings/lsm:excitation" visible=true color=BlueViolet ]
+      [ order=8 label="axialSprings/rdm:excitation" visible=true color=NavajoWhite ]
+      [ order=9 label="axialSprings/ldm:excitation" visible=true color=Gray ]
+      [ order=10 label="axialSprings/rmp:excitation" visible=true color=DarkOliveGreen ]
+      [ order=11 label="axialSprings/lmp:excitation" visible=true color=IndianRed ]
+      [ order=12 label="axialSprings/rsp:excitation" visible=true color=PeachPuff ]
+      [ order=13 label="axialSprings/lsp:excitation" visible=true color=Red ]
+      [ order=14 label="axialSprings/rip:excitation" visible=true color=DarkGreen ]
+      [ order=15 label="axialSprings/lip:excitation" visible=true color=Blue ]
+      [ order=16 label="axialSprings/rad:excitation" visible=true color=Cyan ]
+      [ order=17 label="axialSprings/lad:excitation" visible=true color=Magenta ]
+      [ order=18 label="axialSprings/ram:excitation" visible=true color=DarkOrange ]
+      [ order=19 label="axialSprings/lam:excitation" visible=true color=Pink ]
+      [ order=20 label="axialSprings/rgh:excitation" visible=true color=BlueViolet ]
+      [ order=21 label="axialSprings/lgh:excitation" visible=true color=NavajoWhite ]
+      [ order=22 label="axialSprings/rpm:excitation" visible=true color=Red ]
+      [ order=23 label="axialSprings/lpm:excitation" visible=true color=DarkGreen ]
+    ]
+  ]
+  WayPointProbe [ 
+    startTime=0.0
+    stopTime=0.7
+    updateInterval=-1.0
+    name="WayPoints"
+    track=-1
+    model=null
+    wayPoints=[
+      [ time=0.0
+      ]
+      [ time=0.01
+      ]
+      [ time=0.02
+      ]
+      [ time=0.03
+      ]
+      [ time=0.04
+      ]
+      [ time=0.05
+      ]
+      [ time=0.06
+      ]
+      [ time=0.07
+      ]
+      [ time=0.08
+      ]
+      [ time=0.09
+      ]
+      [ time=0.1
+      ]
+      [ time=0.11
+      ]
+      [ time=0.12
+      ]
+      [ time=0.13
+      ]
+      [ time=0.14
+      ]
+      [ time=0.15
+      ]
+      [ time=0.16
+      ]
+      [ time=0.17
+      ]
+      [ time=0.18
+      ]
+      [ time=0.19
+      ]
+      [ time=0.2
+      ]
+      [ time=0.21
+      ]
+      [ time=0.22
+      ]
+      [ time=0.23
+      ]
+      [ time=0.24
+      ]
+      [ time=0.25
+      ]
+      [ time=0.26
+      ]
+      [ time=0.27
+      ]
+      [ time=0.28
+      ]
+      [ time=0.29
+      ]
+      [ time=0.3
+      ]
+      [ time=0.31
+      ]
+      [ time=0.32
+      ]
+      [ time=0.33
+      ]
+      [ time=0.34
+      ]
+      [ time=0.35
+      ]
+      [ time=0.36
+      ]
+      [ time=0.37
+      ]
+      [ time=0.38
+      ]
+      [ time=0.39
+      ]
+      [ time=0.4
+      ]
+      [ time=0.41
+      ]
+      [ time=0.42
+      ]
+      [ time=0.43
+      ]
+      [ time=0.44
+      ]
+      [ time=0.45
+      ]
+      [ time=0.46
+      ]
+      [ time=0.47
+      ]
+      [ time=0.48
+      ]
+      [ time=0.49
+      ]
+      [ time=0.5
+      ]
+      [ time=0.51
+      ]
+      [ time=0.52
+      ]
+      [ time=0.53
+      ]
+      [ time=0.54
+      ]
+      [ time=0.55
+      ]
+      [ time=0.56
+      ]
+      [ time=0.57
+      ]
+      [ time=0.58
+      ]
+      [ time=0.59
+      ]
+      [ time=0.6
+      ]
+      [ time=0.61
+      ]
+      [ time=0.62
+      ]
+      [ time=0.63
+      ]
+      [ time=0.64
+      ]
+      [ time=0.65
+      ]
+      [ time=0.66
+      ]
+      [ time=0.67
+      ]
+      [ time=0.68
+      ]
+      [ time=0.69
+      ]
+      [ time=0.7
+       breakpoint=true
+      ]
+      [ time=0.71
+      ]
+      [ time=0.72
+      ]
+      [ time=0.73
+      ]
+      [ time=0.74
+      ]
+      [ time=0.75
+      ]
+      [ time=0.76
+      ]
+      [ time=0.77
+      ]
+      [ time=0.78
+      ]
+      [ time=0.79
+      ]
+      [ time=0.8
+      ]
+      [ time=0.81
+      ]
+      [ time=0.82
+      ]
+      [ time=0.83
+      ]
+      [ time=0.84
+      ]
+      [ time=0.85
+      ]
+      [ time=0.86
+      ]
+      [ time=0.87
+      ]
+      [ time=0.88
+      ]
+      [ time=0.89
+      ]
+      [ time=0.9
+      ]
+      [ time=0.91
+      ]
+      [ time=0.92
+      ]
+      [ time=0.93
+      ]
+      [ time=0.94
+      ]
+      [ time=0.95
+      ]
+      [ time=0.96
+      ]
+      [ time=0.97
+      ]
+      [ time=0.98
+      ]
+      [ time=0.99
+      ]
+      [ time=1.0
+      ]
+      [ time=1.01
+      ]
+      [ time=1.02
+      ]
+      [ time=1.03
+      ]
+      [ time=1.04
+      ]
+      [ time=1.05
+      ]
+      [ time=1.06
+      ]
+      [ time=1.07
+      ]
+      [ time=1.08
+      ]
+      [ time=1.09
+      ]
+      [ time=1.1
+      ]
+      [ time=1.11
+      ]
+      [ time=1.12
+      ]
+      [ time=1.13
+      ]
+      [ time=1.14
+      ]
+      [ time=1.15
+      ]
+      [ time=1.16
+      ]
+      [ time=1.17
+      ]
+      [ time=1.18
+      ]
+      [ time=1.19
+      ]
+      [ time=1.2
+      ]
+      [ time=1.21
+      ]
+      [ time=1.22
+      ]
+      [ time=1.23
+      ]
+      [ time=1.24
+      ]
+      [ time=1.25
+      ]
+      [ time=1.26
+      ]
+      [ time=1.27
+      ]
+      [ time=1.28
+      ]
+      [ time=1.29
+      ]
+      [ time=1.3
+      ]
+      [ time=1.31
+      ]
+      [ time=1.32
+      ]
+      [ time=1.33
+      ]
+      [ time=1.34
+      ]
+      [ time=1.35
+      ]
+      [ time=1.36
+      ]
+      [ time=1.37
+      ]
+      [ time=1.38
+      ]
+      [ time=1.39
+      ]
+      [ time=1.4
+      ]
+      [ time=1.41
+      ]
+      [ time=1.42
+      ]
+      [ time=1.43
+      ]
+      [ time=1.44
+      ]
+      [ time=1.45
+      ]
+      [ time=1.46
+      ]
+      [ time=1.47
+      ]
+      [ time=1.48
+      ]
+      [ time=1.49
+      ]
+    ]
+  ]
+]

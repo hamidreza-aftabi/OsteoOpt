@@ -1,0 +1,2 @@
+skull "skull_with_cartilage_half.obj"
+jaw "mandible_with_cartilage_half.obj"
