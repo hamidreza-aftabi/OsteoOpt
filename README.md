@@ -141,7 +141,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 ## 4. Configuration and Execution
 
 - **Running the Framework:**  
-     XXXXXXXXXXXXXXXX
+   -   
 ---
 
 ## 5. Troubleshooting
