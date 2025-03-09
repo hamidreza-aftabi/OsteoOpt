@@ -82,7 +82,7 @@ Before installing and running the framework, ensure your system meets the follow
    - **Artisynth_VSP & Artisynth_JawModel:**  
      These components are included in this repository. You can find them in the `Artisynth_VSP` and `Artisynth_JawModel` directories.
 
-For more information on available models and additional downloads, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
+For more information on additional details, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
 
 
 4. **Configure Projects:**  
