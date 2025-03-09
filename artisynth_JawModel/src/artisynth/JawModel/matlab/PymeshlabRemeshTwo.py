@@ -3,24 +3,20 @@ import pymeshlab
 from pathlib import Path
 
 
-# Define source and destination directories
-#sourceDir = 'C:\\Users\\Hamidreza\\git\\artisynth_istar\\src\\artisynth\\istar\\reconstruction\\optimizationResultTwo'
-#destinationDir = 'C:\\Users\\Hamidreza\\git\\artisynth_tmj_final\\artisynth_TMJ_Final\\src\\artisynth\\istar\\TMJModel\\JawTMJ\\geometry'
-
 
 # Get the current directory of the Python script
 current_path = Path().resolve()
 
-# Navigate back 8 directories
+# Navigate back 5 directories
 target_path = current_path
 
-for _ in range(8):
+for _ in range(5):
     target_path = target_path.parent
 
 # Navigate into the 'artisynth_istar/src/artisynth/istar/reconstruction/optimizationResult' directory
-sourceDir = target_path / 'artisynth_istar' / 'src' / 'artisynth' / 'istar' / 'reconstruction' / 'optimizationResultTwo'
+sourceDir = target_path / 'artisynth_VSP' / 'src' / 'artisynth' / 'VSP' / 'reconstruction' / 'optimizationResultTwo'
 
-destinationDir = target_path / 'artisynth_tmj_final' / 'artisynth_TMJ_Final' / 'src' / 'artisynth' / 'istar' / 'TMJModel' / 'JawTMJ' / 'geometry'
+destinationDir = target_path / 'artisynth_JawModel' / 'src' / 'artisynth' / 'JawModel' / 'geometry'
 
 
 
