@@ -3,7 +3,6 @@ import pymeshlab
 from pathlib import Path
 
 
-
 # Get the current directory of the Python script
 current_path = Path().resolve()
 
@@ -13,12 +12,9 @@ target_path = current_path
 for _ in range(5):
     target_path = target_path.parent
 
-# Navigate into the 'artisynth_istar/src/artisynth/istar/reconstruction/optimizationResult' directory
 sourceDir = target_path / 'artisynth_VSP' / 'src' / 'artisynth' / 'VSP' / 'reconstruction' / 'optimizationResultTwo'
 
 destinationDir = target_path / 'artisynth_JawModel' / 'src' / 'artisynth' / 'JawModel' / 'geometry'
-
-
 
 
 # List of files to be remeshed with specific target lengths
