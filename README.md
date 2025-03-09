@@ -91,7 +91,7 @@ For more information on additional details, visit [Artisynth Webpage](https://ww
 
 5. **Launch Artisynth Core:**  
    - Launch the Artisynth Core application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
-   - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for Artisynth VSP and Artisynth Jaw Model separately to ensure they are visible externally through MATLAB.
+   - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `Artisynth_VSP` and `Artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
 
 ### 3.3 MATLAB Integration
 
