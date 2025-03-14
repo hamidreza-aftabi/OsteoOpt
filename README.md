@@ -155,8 +155,8 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ---
 
-## 7. License
+## 6. License
 
-This project is licensed under the GNU General Public License v3. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3. See the [LICENSE](LICENSE) file for details.  Please do not redistribute the current version, as it is intended for review purposes only.
 
 ---
