@@ -149,29 +149,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ---
 
-## 5. Troubleshooting
-
-- **Java/Eclipse Issues:**  
-  - Confirm Eclipse is set to use Java 8.  
-  - Verify Java 8 installation if conflicts occur.
-  - Ensure that `Artisynth_JawModel` and `Artisynth_VSP` are located within the same folder.
-
-
-- **Artisynth Configuration Errors:**  
-  - Double-check run configurations to ensure proper library inclusion.  
-  - Ensure build settings for supporting libraries are correctly configured.
-
-- **MATLAB Integration Problems:**  
-  - Ensure the external class path includes the “classes” directory.  
-  - Confirm the `ARTISYNTH_HOME` variable is correctly set.  
-  - Verify the Python executable path with `pyenv`.
-
-- **Memory Errors in MATLAB:**  
-  - Increase the Java Heap Memory allocation via MATLAB preferences if you encounter memory-related issues.
-
----
-
-## 6. Ethics and Data Access
+## 5. Ethics and Data Access
 
  **Important:**  Due to ethical considerations, the mesh file required for certain processing tasks has not been included in this repository. Researchers or practitioners needing access to this file are requested to contact the authors directly. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
 
