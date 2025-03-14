@@ -23,9 +23,7 @@ https://github.com/user-attachments/assets/674e7652-5fcb-4568-b28b-76c239419254
 
 Before installing and running the framework, ensure your system meets the following requirements (tested on Windows 10; currently only compatible with Windows):
 
-- **[JDK 8 or Higher (64-bit)](https://www.oracle.com/java/technologies/downloads/)**  
-
-- **[Eclipse IDE](https://eclipseide.org/)**
+- **[JDK 8 or Higher](https://www.oracle.com/java/technologies/downloads/) and [Eclipse IDE](https://eclipseide.org/)**  
   
 - **[Artisynth](https://www.artisynth.org/Main/HomePage) Components:**  
   - Artisynth Core  
