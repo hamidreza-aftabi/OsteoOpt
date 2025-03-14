@@ -69,18 +69,18 @@ Before installing and running the framework, ensure your system meets the follow
 
 ### 3.2 Artisynth Components
 
-4. **Download Required Repositories:**
+4. **Download Required Repositories:** Open Eclipse and import the GitHub project using **File → Import → Projects from Git → Clone URI**.
 
    - **Artisynth Core:**  
-     The current development version of `artisynth_core` is available from GitHub. To clone it, run:
+     The current development version of `artisynth_core` is available from GitHub. To clone it, use the following URL in Eclipse:
      ```bash
-     git clone https://github.com/artisynth/artisynth_core.git
+     https://github.com/artisynth/artisynth_core.git
      ```
 
    - **Artisynth Models:**  
-     The current development version of `artisynth_models` is available from GitHub. To clone it, run:
+     The current development version of `artisynth_models` is available from GitHub. To clone it, use the following URL in Eclipse:
      ```bash
-     git clone https://github.com/artisynth/artisynth_models.git
+     https://github.com/artisynth/artisynth_models.git
      ```
 
    - **Artisynth VSP & Artisynth Jaw Model:**  
@@ -98,15 +98,14 @@ For more information on additional details, visit [Artisynth Webpage](https://ww
 ### 3.3 MATLAB Integration
 
 6. **Set External Class Path:**  
-    In MATLAB, add the `artisynth_core` MATLAB folder to your path so that Java classes are available. For example:
+    Install and open MATLAB. Then add the `artisynth_core` MATLAB folder to your path so that Java classes are available. For example:
   
 ```matlab
 addpath(fullfile('path','to','artisynth_core','matlab'));
 ```
 
 7. **Environment Variable:**  
- - Set the `ARTISYNTH_HOME` environment variable to the path where `artisynth_core` is installed
- - Then set the Artisynth class path in MATLAB using:
+ - Set the `ARTISYNTH_HOME` environment variable to the path where `artisynth_core` is installed. Then set the Artisynth class path in MATLAB using:
 
 ```matlab
 setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
