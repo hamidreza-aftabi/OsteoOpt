@@ -53,7 +53,6 @@ Before installing and running the framework, ensure your system meets the follow
    ArtiSynth requires a full 64-bit Java Development Kit (JDK) with a Java compiler—using only a Java Runtime Environment (JRE) is not sufficient.  
    - **Download:** We recommend installing a JDK from Oracle. Visit [Oracle Java Downloads](https://www.oracle.com/java/technologies/downloads/) and choose the appropriate installer for your system. For Windows, the easiest option is often the “x64 Installer.”  
    - **Note for JDK Versions:**  
-     - JDK 8 is typically installed under `C:\Program Files\Java\jdk-1.8`  
      - For ARM-based Windows systems, you must still install a 64-bit Intel-based JDK (look for “x64” in the download name) to run via the Intel compatibility layer.
 
 2. **Verify the JDK Installation:**  
@@ -61,9 +60,16 @@ Before installing and running the framework, ensure your system meets the follow
    ```bash
    javac -version
 
+3. **Install Eclipse:**
+   - Donwload and install [Eclipse IDE](https://eclipseide.org/)
+   - Open **Window > Preferences** from the main menu.
+   - In the Preferences dialog, go to **Java > Installed JREs** and click Add....
+   - In the JRE Type dialog, keep **Standard VM** selected and click Next.
+   - In the JRE Definition dialog, enter the JDK installation folder
+
 ### 3.2 Artisynth Components
 
-3. **Download Required Repositories:**
+4. **Download Required Repositories:**
 
    - **Artisynth Core:**  
      The current development version of `artisynth_core` is available from GitHub. To clone it, run:
@@ -83,11 +89,9 @@ Before installing and running the framework, ensure your system meets the follow
 For more information on additional details, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
 
 
-4. **Configure Projects:**  
-   - **Run Configuration:** Set the run configuration for `artisynth_core` so that it has access to the three supporting libraries.
-   - **Build Configuration:** Adjust the build settings for each supporting library to ensure they are visible during runtime.
-
-5. **Launch Artisynth Core:**  
+5. **Configure Projects:**  
+   - Set the run configuration for `artisynth_core` so that it has access to the three supporting libraries.
+   - Adjust the build settings for each supporting library to ensure they are visible during runtime.
    - Launch the `artisynth_core` application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
    - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `artisynth_VSP` and `artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
 
