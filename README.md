@@ -15,8 +15,6 @@
 https://github.com/user-attachments/assets/674e7652-5fcb-4568-b28b-76c239419254
 
 
-**Important:** Please note that due to ethical restrictions, patient-specific mesh files are not included. Interested parties should contact the authors directly for access. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
-
 ---
 
 
@@ -172,7 +170,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ## 6. Ethics and Data Access
 
-Due to ethical considerations, the mesh file required for certain processing tasks has not been included in this repository. Researchers or practitioners needing access to this file are requested to contact the authors directly.
+ **Important:**  Due to ethical considerations, the mesh file required for certain processing tasks has not been included in this repository. Researchers or practitioners needing access to this file are requested to contact the authors directly. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
 
 ---
 
