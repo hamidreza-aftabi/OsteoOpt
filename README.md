@@ -27,7 +27,6 @@ Before installing and running the framework, ensure your system meets the follow
   
 - **[Artisynth](https://www.artisynth.org/Main/HomePage) Components:**  
   - Artisynth Core  
-  - Artisynth Model  
   - Artisynth VSP  
   - Artisynth Jaw Model  
   *(Note: Artisynth VSP and Artisynth Jaw Model are included within this repository.)*
@@ -70,12 +69,6 @@ Before installing and running the framework, ensure your system meets the follow
      The current development version of `artisynth_core` is available from GitHub. To clone it, use the following URL in Eclipse:
      ```bash
      https://github.com/artisynth/artisynth_core.git
-     ```
-
-   - **Artisynth Models:**  
-     The current development version of `artisynth_models` is available from GitHub. To clone it, use the following URL in Eclipse:
-     ```bash
-     https://github.com/artisynth/artisynth_models.git
      ```
 
    - **Artisynth VSP & Artisynth Jaw Model:**  
@@ -146,9 +139,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ## 5. Ethics and Data Access
 
- **Important:**  Due to ethical considerations, the mesh file required for certain processing tasks has not been included in this repository. Researchers or practitioners needing access to this file are requested to contact the authors directly. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. This repository is actively under reconstruction; your feedback is greatly appreciated.
-
----
+ **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository and will be made available upon the paper's acceptance. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. 
 
 ## 6. License
 
