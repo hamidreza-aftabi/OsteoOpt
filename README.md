@@ -33,13 +33,10 @@ Before installing and running the framework, ensure your system meets the follow
   *(Note: Artisynth VSP and Artisynth Jaw Model are included within this repository.)*
 
 - **[MATLAB](https://www.mathworks.com/products/matlab.html):**  
-  Version 2023a is recommended. Ensure that MATLAB is properly configured to interface with the installed JDK and Python environment.
 
 - **Python 3.8 (via [Anaconda](https://www.anaconda.com/download)):**  
-  Use Python 3.8 or a compatible version, ensuring it matches your MATLAB integration requirements.
 
 - **[PyMeshLab](https://pymeshlab.readthedocs.io/en/latest/installation.html):**  
-  Install within your Python environment (e.g., by running `pip3 install pymeshlab`).
 
 ---
 
