@@ -31,11 +31,9 @@ Before installing and running the framework, ensure your system meets the follow
   - Artisynth Jaw Model  
   *(Note: Artisynth VSP and Artisynth Jaw Model are included within this repository.)*
 
-- **[MATLAB](https://www.mathworks.com/products/matlab.html):**  
+- **[MATLAB](https://www.mathworks.com/products/matlab.html)**  
 
-- **Python 3.8 (via [Anaconda](https://www.anaconda.com/download)):**  
-
-- **[PyMeshLab](https://pymeshlab.readthedocs.io/en/latest/installation.html):**  
+- **Python (via [Anaconda](https://www.anaconda.com/download)) and [PyMeshLab](https://pymeshlab.readthedocs.io/en/latest/installation.html) Library**  
 
 ---
 
