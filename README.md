@@ -9,7 +9,7 @@
 
 **OsteoOpt** is a Bayesian optimization framework designed to improve bone union likelihood in mandibular reconstruction surgery and facilitates computer-aided intervention by systematically varying key surgical parameters—resection plane orientation, donor bone positioning, and graft length—across three mandibular regions. This repository contains the core code and configuration details required to set up the system. 
 
-**Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration:**
+**Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration):**
 
 
 https://github.com/user-attachments/assets/674e7652-5fcb-4568-b28b-76c239419254
@@ -74,7 +74,7 @@ Before installing and running the framework, ensure your system meets the follow
 
 
 5. **Configure Projects:**  
-   - Set the run configuration for `artisynth_core` so that it has access to the three supporting libraries.
+   - Set the run configuration for `artisynth_core` so that it has access to the two supporting libraries.
    - Adjust the build settings for each supporting library to ensure they are visible during runtime.
    - Launch the `artisynth_core` application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
    - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `artisynth_VSP` and `artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
