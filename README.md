@@ -137,7 +137,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ## 5. Ethics and Data Access
 
- **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository and will be made available upon the paper's acceptance. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development. 
+ **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository and will be made available upon publication of the paper. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development.
 
 ## 6. License
 
