@@ -12,7 +12,7 @@
 **Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration):**
 
 
-https://github.com/user-attachments/assets/674e7652-5fcb-4568-b28b-76c239419254
+https://github.com/user-attachments/assets/233df379-92a2-49cd-8cf3-126536b4520d
 
 
 ---
