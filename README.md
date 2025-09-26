@@ -1,6 +1,5 @@
 # OsteoOpt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery
 
-** MICCAI 2025**  
 **Repository Status: Under Reconstruction**
 
 ---
@@ -11,9 +10,7 @@
 
 **Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration):**
 
-
-https://github.com/user-attachments/assets/233df379-92a2-49cd-8cf3-126536b4520d
-
+https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 
 ---
 
@@ -137,7 +134,7 @@ setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 
 ## 5. Ethics and Data Access
 
- **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository and will be made available upon publication of the paper. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development.
+ **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development.
 
 ## 6. License
 
