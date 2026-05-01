@@ -1,4 +1,4 @@
-OsteoOpt++: A Patient-Specific Bayesian Optimization Framework for Enhancing Bone Union in Mandibular Reconstruction Surgery
+# OsteoOpt++: A Patient-Specific Bayesian Optimization Framework for Enhancing Bone Union in Mandibular Reconstruction Surgery
 
 **Repository Status: Under Reconstruction**
 
