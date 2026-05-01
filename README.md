@@ -1,4 +1,4 @@
-# OsteoOpt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery
+OsteoOpt++: A Patient-Specific Bayesian Optimization Framework for Enhancing Bone Union in Mandibular Reconstruction Surgery
 
 **Repository Status: Under Reconstruction**
 
@@ -6,7 +6,7 @@
 
 ## 1. Overview
 
-**OsteoOpt** is a Bayesian optimization framework designed to improve bone union likelihood in mandibular reconstruction surgery and facilitates computer-aided intervention by systematically varying key surgical parameters—resection plane orientation, donor bone positioning, and graft length—across three mandibular regions. This repository contains the core code and configuration details required to set up the system. 
+**OsteoOpt++** is a patient-specific Bayesian optimization framework designed to improve bone union likelihood in mandibular reconstruction surgery and facilitates computer-aided intervention by systematically varying key surgical parameters—resection plane orientation, donor bone positioning, and graft length—across three mandibular regions. This repository contains the core code and configuration details required to set up the system. 
 
 **Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration):**
 
