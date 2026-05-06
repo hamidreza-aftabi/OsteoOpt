@@ -26,16 +26,14 @@ requiredTmjPipelines = {
     'registration_pipeline_fossa_right.json'
 };
 
-if all(cellfun(@(f) isfile(fullfile(pwd, f)), requiredTmjPipelines))
-    pyrunfile('applyDualDeformRegistration_disc.py')
-else
-    warning(['Skipping dual disc deformation because one or more TMJ ' ...
-        'registration pipeline JSON files are missing. Generate the ' ...
-        'condyle and fossa registration_pipeline_*.json files first.']);
+missingTmjPipelines = requiredTmjPipelines(~cellfun(@(f) isfile(fullfile(pwd, f)), requiredTmjPipelines));
+if ~isempty(missingTmjPipelines)
+    error(['TMJ disc and capsule deformation requires these generated ' ...
+        'registration pipeline files: %s'], strjoin(missingTmjPipelines, ', '));
 end
 
-% Optional capsule adaptation helper:
-% pyrunfile('applyDualDeformRegistration_capsule.py')
+pyrunfile('applyDualDeformRegistration_disc.py')
+pyrunfile('applyDualDeformRegistration_capsule.py')
 %%%%%%%%%%%%%%%%%%%%%
 
 

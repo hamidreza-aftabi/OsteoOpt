@@ -17,8 +17,8 @@ and Bayesian optimization workflow used by the generic cases.
 2. Applies the rigid transform to mandible, maxilla, donor, plate, screw, and
    TMJ geometry.
 3. Estimates deformable CPD fields for mandible and maxilla/skull surfaces.
-4. Registers condyle/fossa regions and applies anatomy-guided disc and optional
-   capsule adaptation.
+4. Registers condyle/fossa regions and applies anatomy-guided disc and capsule
+   adaptation.
 5. Updates muscle insertion/origin landmarks, hyoid position, condyle markers,
    ligament markers, muscle length parameters, PCSA-derived muscle forces, and
    ligament rest lengths.
@@ -46,7 +46,7 @@ format. The values should come from the CT-derived PCSA estimation step.
   ArtiSynth model class for the patient-specific case.
 - `deformableRegistration_disc.py` is the reusable CPD registration helper for
   condyle/fossa targets. Generate the needed `registration_pipeline_*.json`
-  files for the relevant side before enabling downstream dual disc or capsule
+  files for the relevant side before running downstream dual disc and capsule
   deformation.
 - Generated files such as `registration_weights.json`,
   `deformation_weights_*.json`, `registration_pipeline_*.json`,
