@@ -5,12 +5,13 @@
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-under%20reconstruction-yellow.svg)](#)
 
-OsteoOpt++ is an image-to-decision framework for mandibular reconstruction. It
-combines virtual surgical planning, ArtiSynth simulation, and Bayesian
-optimization to search reconstruction variables that improve predicted
-donor-host bone union.
+OsteoOpt++ is the extended arXiv version of OsteoOpt, an image-to-decision
+framework for mandibular reconstruction. It combines virtual surgical planning,
+ArtiSynth simulation, and Bayesian optimization to search reconstruction
+variables that improve predicted donor-host bone union.
 
-Paper: [arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
+Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
+Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
@@ -139,11 +140,12 @@ If you use OsteoOpt++, please cite the extended arXiv version:
 }
 ```
 
-Please also cite the MICCAI conference paper:
+Please also cite the earlier OsteoOpt MICCAI conference paper
+([ResearchGate](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery)):
 
 ```bibtex
 @inproceedings{aftabi2025osteoopt,
-  title = {Osteoopt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery},
+  title = {{OsteoOpt}: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery},
   author = {Aftabi, Hamidreza and Lloyd, John E. and Ding, Amanda and Sagl, Benedikt and Prisman, Eitan and Hodgson, Antony and Fels, Sidney},
   booktitle = {International Conference on Medical Image Computing and Computer-Assisted Intervention},
   pages = {448--458},
