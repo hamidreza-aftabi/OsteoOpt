@@ -16,6 +16,20 @@ Paper: [arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 
 https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 
+## Repository Layout
+
+- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
+  optimization scripts.
+- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
+  patient-specific registration and model-construction scripts.
+- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
+- `assets/` - README figures.
+
+## Ethics and Data Access
+
+Patient-specific CT volumes and meshes are not included due to ethics and
+privacy constraints.
+
 ## Optimization Workflow
 
 ![Optimization loop](assets/optimization_loop.jpg)
@@ -81,8 +95,9 @@ Tested on Windows.
    ```
 
 Patient-specific muscle-force estimation also requires CT muscle segmentation
-before running the registration/model-construction script. **The CT muscle
-segmentation code will be added soon.**
+and scan cross-section analysis before running the registration/model-construction
+script. **The CT muscle segmentation and scan cross-section code will be added
+soon.**
 
 ## Running
 
@@ -113,23 +128,9 @@ Place the required patient geometry inputs in `../geometry`, create a local
 Registration_Artisynth_Main
 ```
 
-## Repository Layout
-
-- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
-  optimization scripts.
-- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
-  patient-specific registration and model-construction scripts.
-- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
-- `assets/` - README figures.
-
-## Ethics and Data Access
-
-Patient-specific CT volumes and meshes are not included due to ethics and
-privacy constraints.
-
 ## Citation
 
-If you use OsteoOpt++, please cite:
+If you use OsteoOpt++, please cite the extended arXiv version:
 
 ```bibtex
 @misc{aftabi2026patient,
@@ -140,6 +141,19 @@ If you use OsteoOpt++, please cite:
   archivePrefix = {arXiv},
   primaryClass = {cs.CV},
   url = {https://arxiv.org/abs/2605.01084}
+}
+```
+
+Please also cite the MICCAI conference paper:
+
+```bibtex
+@inproceedings{aftabi2025osteoopt,
+  title = {Osteoopt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery},
+  author = {Aftabi, Hamidreza and Lloyd, John E. and Ding, Amanda and Sagl, Benedikt and Prisman, Eitan and Hodgson, Antony and Fels, Sidney},
+  booktitle = {International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages = {448--458},
+  year = {2025},
+  organization = {Springer}
 }
 ```
 
