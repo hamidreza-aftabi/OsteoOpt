@@ -1,4 +1,4 @@
-# Patient-Specific Modeling Code
+# Patient-Specific Registration and Model Construction
 
 Entry point:
 
@@ -6,10 +6,10 @@ Entry point:
 Registration_Artisynth_Main
 ```
 
-This folder contains the reusable patient-specific preprocessing layer for
-OsteoOpt++. It builds a patient-specific ArtiSynth model once, then the
-resulting model can be passed into the same planning, remeshing, simulation,
-and Bayesian optimization workflow used by the generic cases.
+This folder contains the patient-specific registration and model-construction
+preprocessing layer for OsteoOpt++. It builds a patient-specific ArtiSynth model
+once, then the resulting digital twin can be used by the existing optimization
+workflow.
 
 ## What This Pipeline Does
 
@@ -23,13 +23,9 @@ and Bayesian optimization workflow used by the generic cases.
    ligament markers, muscle length parameters, PCSA-derived muscle forces, and
    ligament rest lengths.
 
-## Inputs Kept Out Of Git
+## Required Local Inputs
 
-Patient-specific CT data, meshes, registration weights, generated JSON files,
-temporary OBJ files, visualization PNGs, and MATLAB build caches are excluded by
-`.gitignore`.
-
-Before running, place patient geometry in:
+Before running, place the patient geometry inputs in:
 
 ```text
 ../geometry/
@@ -37,6 +33,10 @@ Before running, place patient geometry in:
 
 Create a local `PCSA.txt` beside these scripts using `PCSA.example.txt` as the
 format. The values should come from the CT-derived PCSA estimation step.
+
+Use the Anaconda Python environment configured in the root README. The Python
+libraries called from MATLAB are listed in `requirements.txt`, including the
+PyMeshLab API and `pycpd` from `https://github.com/siavashk/pycpd`.
 
 ## Notes
 
@@ -48,7 +48,3 @@ format. The values should come from the CT-derived PCSA estimation step.
   condyle/fossa targets. Generate the needed `registration_pipeline_*.json`
   files for the relevant side before running downstream dual disc and capsule
   deformation.
-- Generated files such as `registration_weights.json`,
-  `deformation_weights_*.json`, `registration_pipeline_*.json`,
-  `muscle_points.txt`, and `closest_vertex.txt` are intermediate outputs and
-  should not be committed.
