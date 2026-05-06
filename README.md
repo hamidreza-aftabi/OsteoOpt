@@ -1,11 +1,19 @@
-# OsteoOpt++: Patient-Specific Optimization for Mandibular Reconstruction Planning
+# OsteoOpt++: Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union
 
-**Repository Status: Under Reconstruction**
+[![arXiv](https://img.shields.io/badge/arXiv-2605.01084-b31b1b.svg)](https://arxiv.org/abs/2605.01084)
+[![arXiv version](https://img.shields.io/badge/arXiv%20version-v1-b31b1b.svg)](https://arxiv.org/abs/2605.01084v1)
+[![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-under%20reconstruction-yellow.svg)](#)
+[![MATLAB](https://img.shields.io/badge/MATLAB-required-orange.svg)](#setup)
+[![Python](https://img.shields.io/badge/Python-Anaconda-3776AB.svg)](#setup)
+[![ArtiSynth](https://img.shields.io/badge/ArtiSynth-required-555.svg)](#setup)
 
 OsteoOpt++ is an image-to-decision framework for mandibular reconstruction. It
 combines virtual surgical planning, ArtiSynth simulation, and Bayesian
 optimization to search reconstruction variables that improve predicted
 donor-host bone union.
+
+Paper: [arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
@@ -119,8 +127,25 @@ Registration_Artisynth_Main
 Patient-specific CT volumes and meshes are not included due to ethics and
 privacy constraints.
 
+## Citation
+
+If you use OsteoOpt++, please cite:
+
+```bibtex
+@misc{aftabi2026patient,
+  title = {Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union},
+  author = {Aftabi, Hamidreza and Lloyd, John E. and Ding, Amanda and Sagl, Benedikt and Prisman, Eitan and Hodgson, Antony and Fels, Sidney},
+  year = {2026},
+  eprint = {2605.01084},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2605.01084}
+}
+```
+
 ## License
 
-This project is licensed under the GNU General Public License v3. See
-[LICENSE](LICENSE) for details. Please do not redistribute the current version,
-as it is intended for review purposes only.
+OsteoOpt++ is source-available for noncommercial research and educational use
+under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use
+requires separate written permission from the authors. See [NOTICE](NOTICE) for
+the required copyright notice.
