@@ -4,9 +4,6 @@
 [![arXiv version](https://img.shields.io/badge/arXiv%20version-v1-b31b1b.svg)](https://arxiv.org/abs/2605.01084v1)
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-under%20reconstruction-yellow.svg)](#)
-[![MATLAB](https://img.shields.io/badge/MATLAB-required-orange.svg)](#setup)
-[![Python](https://img.shields.io/badge/Python-Anaconda-3776AB.svg)](#setup)
-[![ArtiSynth](https://img.shields.io/badge/ArtiSynth-required-555.svg)](#setup)
 
 OsteoOpt++ is an image-to-decision framework for mandibular reconstruction. It
 combines virtual surgical planning, ArtiSynth simulation, and Bayesian

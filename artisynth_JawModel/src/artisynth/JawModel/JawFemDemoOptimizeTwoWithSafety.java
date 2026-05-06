@@ -92,7 +92,6 @@ public class JawFemDemoOptimizeTwoWithSafety extends RootModel implements Action
 
    boolean myShowDonorStress = false;
 
-  
    
    boolean myUseScrews = true;
   
@@ -100,7 +99,7 @@ public class JawFemDemoOptimizeTwoWithSafety extends RootModel implements Action
    double DENSITY_TO_mmKS = 1e-9; // convert density from MKS tp mmKS
    double PRESSURE_TO_mmKS = 1e-3; // convert pressure from MKS tp mmKS
 
-   double CancellousBoneDensity = 100.0 * DENSITY_TO_mmKS;
+   double CancellousBoneDensity = 700.0 * DENSITY_TO_mmKS;
    double CancellousBoneE = 1.3*1e9 * PRESSURE_TO_mmKS;
    double CancellousBoneNu = 0.3;
 
@@ -110,12 +109,12 @@ public class JawFemDemoOptimizeTwoWithSafety extends RootModel implements Action
    
    double corticalBoneYoungModulus =  13.7*1e9 * PRESSURE_TO_mmKS;
    double corticalBonePoissonRatio = 0.3;
-   double corticalBoneDensity = 2000.0 * DENSITY_TO_mmKS;
+   double corticalBoneDensity = 1640.0 * DENSITY_TO_mmKS;
  
-   double corticalAppositionDensity = 0.002;
-   double cancellousAppositionDensity = 0.00015;
+   public static double corticalAppositionDensity = 0.00164;
+   public static double cancellousAppositionDensity = 0.0007;
    
-   double t=0.75; 
+   double t = 0.75;
 
    protected static double unitConversion = 1000;
 
@@ -124,17 +123,16 @@ public class JawFemDemoOptimizeTwoWithSafety extends RootModel implements Action
    double  DEFAULT_Damping = 10; 
    double  DEFAULT_Nu = 0.3;
    
-   
+   double corticalThickness = 1.93;
+
    
    FemModel3d myDonor0;
    FemModel3d myDonor1;
    FemModel3d myPlate;
  
-   
    RigidBody myDonor0Mesh;
    RigidBody myDonor1Mesh;
 
-   
    
    RigidBody myMandibleRight;
    RigidBody myMandibleLeft;
@@ -720,7 +718,7 @@ public class JawFemDemoOptimizeTwoWithSafety extends RootModel implements Action
       
       //Get the vertices from the surface mesh of the donor mesh rigid body
        donor0MeshSurface = myDonor0Mesh.getSurfaceMesh();
-      double distanceThreshold = 2.5;  // Set your distance threshold
+      double distanceThreshold = corticalThickness;  // Set your distance threshold
       
       //Set to store elements close to the surface
       elementsCloseToSurface0 = new HashSet<>();
@@ -1432,7 +1430,7 @@ public FemModel3d createFemModel (
       // use AJL collisions so we can render pressure maps:
       cm.setColliderType (ColliderType.AJL_CONTOUR);
 
-      myJawModel.setCollisionBehavior (myJawModel.rigidBodies().get ("jaw_resected"), (FemModel3d) myJawModel.models().get ("donor0"), behav7);
+      myJawModel.setCollisionBehavior (myJawModel.rigidBodies().get ("jaw_resected"), (FemModel3d) myJawModel.models().get ("donor1"), behav7);
       myJawModel.setCollisionBehavior (myJawModel.rigidBodies().get ("jaw"), (FemModel3d) myJawModel.models().get ("donor0"), behav8);
       myJawModel.setCollisionBehavior ((FemModel3d) myJawModel.models().get ("donor0"), (FemModel3d) myJawModel.models().get ("donor1"), behav9);
 
@@ -1513,7 +1511,7 @@ public FemModel3d createFemModel (
 
    protected double bolusDiameter = 8; // mm
 
-   protected double bolusMaxResistance = 80; // N
+   protected double bolusMaxResistance = 110; // N
 
    protected double bolusStiffness = bolusMaxResistance / (bolusDiameter);
 
