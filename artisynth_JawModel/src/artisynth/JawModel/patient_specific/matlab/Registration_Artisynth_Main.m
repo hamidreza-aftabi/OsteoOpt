@@ -54,15 +54,7 @@ removeRBMusclesPatient1;
 
 %%%%%%%%%%%%%%%%%%%%%
 ah1 = artisynth('-model', modelClassName);
-%invisibleComponents
 %%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%
-visibleComponents1
-visibleComponents2
-%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%
 removeLigamentsPatient1;
