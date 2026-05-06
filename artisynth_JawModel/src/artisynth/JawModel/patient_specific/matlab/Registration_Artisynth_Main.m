@@ -81,7 +81,8 @@ modifyLigamentCondyleVertexBased
 %%%%%%%%%%%%%%%%%%%%%
 extractMuscleRatio
 modifyMuscleLength
-modifyPCSA
+calculateFMAX
+modifyFMAX
 modifyLigamentLength
 %%%%%%%%%%%%%%%%%%%%%
 
