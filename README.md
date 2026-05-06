@@ -81,8 +81,9 @@ Tested on Windows.
    ```
 
 Patient-specific muscle-force estimation also requires CT muscle segmentation
-before running the registration/model-construction script. **The CT muscle
-segmentation code will be added soon.**
+and scan cross-section analysis before running the registration/model-construction
+script. **The CT muscle segmentation and scan cross-section code will be added
+soon.**
 
 ## Running
 
