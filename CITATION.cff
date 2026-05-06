@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use OsteoOpt++, please cite the arXiv paper."
+message: "If you use OsteoOpt++, please cite the extended arXiv paper and the MICCAI conference paper."
 title: "OsteoOpt++"
 type: software
 authors:
@@ -42,3 +42,27 @@ preferred-citation:
   journal: "arXiv preprint arXiv:2605.01084"
   date-published: "2026-05-01"
   url: "https://arxiv.org/abs/2605.01084"
+references:
+  - type: conference-paper
+    title: "OsteoOpt: A Bayesian Optimization Framework for Enhancing Bone Union Likelihood in Mandibular Reconstruction Surgery"
+    authors:
+      - family-names: Aftabi
+        given-names: Hamidreza
+      - family-names: Lloyd
+        given-names: John E.
+      - family-names: Ding
+        given-names: Amanda
+      - family-names: Sagl
+        given-names: Benedikt
+      - family-names: Prisman
+        given-names: Eitan
+      - family-names: Hodgson
+        given-names: Antony
+      - family-names: Fels
+        given-names: Sidney
+    collection-title: "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    publisher:
+      name: "Springer"
+    year: 2025
+    start: 448
+    end: 458
