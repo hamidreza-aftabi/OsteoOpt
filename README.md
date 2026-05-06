@@ -25,11 +25,6 @@ https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 - `artisynth_VSP/` - virtual surgical planning and reconstruction components.
 - `assets/` - README figures.
 
-## Ethics and Data Access
-
-Patient-specific CT volumes and meshes are not included due to ethics and
-privacy constraints.
-
 ## Optimization Workflow
 
 ![Optimization loop](assets/optimization_loop.jpg)
@@ -163,3 +158,8 @@ OsteoOpt++ is source-available for noncommercial research and educational use
 under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use
 requires separate written permission from the authors. See [NOTICE](NOTICE) for
 the required copyright notice.
+
+## Ethics and Data Access
+
+Patient-specific CT volumes and meshes are not included due to ethics and
+privacy constraints.
