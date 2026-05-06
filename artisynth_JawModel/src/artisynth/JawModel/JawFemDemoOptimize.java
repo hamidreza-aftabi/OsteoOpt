@@ -88,26 +88,26 @@ import maspack.widgets.IntegerField;
 
 
 public class JawFemDemoOptimize extends RootModel implements ActionListener {
-  
-   
-   JawModelFEM myJawModel; 
+
+   JawModelFEM myJawModel;
    TrackingController myTrackingController;
    ScalarNodalField integField;
    
+   boolean Patient_Specific  = false;
+
    boolean Element_Visibility = false;
    
    boolean myShowDonorStress = false;
    
    boolean cutPlane = false;
-   
-   String donorMesh = "donor_opt0_remeshed.obj";
+
    String plateFile = "plate_opt.art";
-     
+   String donorMesh;
    
    public static double DENSITY_TO_mmKS = 1e-9; // convert density from MKS tp mmKS
    public static double PRESSURE_TO_mmKS = 1e-3; // convert pressure from MKS tp mmKS
 
-   public static double CancellousBoneDensity = 700.0 * DENSITY_TO_mmKS;
+   public static double CancellousBoneDensity = 820.0 * DENSITY_TO_mmKS;
    public static double CancellousBoneE = 1.3*1e9 * PRESSURE_TO_mmKS;
    public static double CancellousBoneNu = 0.3;
 
@@ -115,12 +115,12 @@ public class JawFemDemoOptimize extends RootModel implements ActionListener {
    public static double myTitaniumE = 100*1e9 * PRESSURE_TO_mmKS;
    public static double myTitaniumNu = 0.3;
    
-   public static double corticalBoneDensity = 2000.0 * DENSITY_TO_mmKS;
+   public static double corticalBoneDensity = 1560.0 * DENSITY_TO_mmKS;
    public static double corticalBoneYoungModulus =  13.7*1e9 * PRESSURE_TO_mmKS;
    public static double corticalBonePoissonRatio = 0.3;
  
-   public static double corticalAppositionDensity = 0.002;
-   public static double cancellousAppositionDensity = 0.0007;
+   public static double corticalAppositionDensity = 0.00156;
+   public static double cancellousAppositionDensity = 0.00082;
 
    
    // for interaction between the donor check Optimization paper for prosthesis
@@ -130,7 +130,7 @@ public class JawFemDemoOptimize extends RootModel implements ActionListener {
    double  DEFAULT_Nu = 0.3;
    
    
-   double corticalThickness = 2.5;
+   double corticalThickness = 2.21;
    
    double t=0.75; 
 
@@ -275,9 +275,18 @@ public class JawFemDemoOptimize extends RootModel implements ActionListener {
    @Override
    public void build (String[] args) throws IOException {
       super.build (args);
-      
- 
-     
+
+      if (Patient_Specific) {
+          donorMesh = "P_Affine_Registered_donor_opt0_remeshed.obj";
+
+      }
+      else {
+          donorMesh = "donor_opt0_remeshed.obj";
+
+      }
+
+
+
       setWorkingDir();
       myJawModel = new JawModelFEM("jawmodel");
       addModel (myJawModel);
@@ -643,6 +652,23 @@ public class JawFemDemoOptimize extends RootModel implements ActionListener {
    
    
    
+   public  Point3d findClosestVertex(RigidBody rigidBody, Point3d arbitraryPoint) {
+      MeshBase mesh = rigidBody.getSurfaceMesh();
+     Vertex3d closestVertex = null;
+     double minDistance = 15;
+
+     for (Vertex3d vertex : mesh.getVertices()) {
+         double distance = vertex.getWorldPoint().distance(arbitraryPoint);
+
+         if (distance < minDistance) {
+             minDistance = distance;
+             closestVertex = vertex;
+         }
+     }
+
+     return closestVertex != null ? closestVertex.getWorldPoint() : null;
+ }
+
    
    
    
