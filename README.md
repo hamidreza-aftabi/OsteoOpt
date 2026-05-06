@@ -1,143 +1,107 @@
-# OsteoOpt++: A Patient-Specific Bayesian Optimization Framework for Enhancing Bone Union in Mandibular Reconstruction Surgery
+# OsteoOpt++: Patient-Specific Optimization for Mandibular Reconstruction Planning
 
 **Repository Status: Under Reconstruction**
 
----
+OsteoOpt++ is an image-to-decision framework for mandibular reconstruction. It
+uses CT-derived anatomy, virtual surgical planning, ArtiSynth simulation, and
+Bayesian optimization to search reconstruction variables that improve predicted
+donor-host bone union.
 
-## 1. Overview
-
-**OsteoOpt++** is a patient-specific Bayesian optimization framework designed to improve bone union likelihood in mandibular reconstruction surgery and facilitates computer-aided intervention by systematically varying key surgical parameters—resection plane orientation, donor bone positioning, and graft length—across three mandibular regions. This repository contains the core code and configuration details required to set up the system. 
-
-**Demo illustrating a single iteration of the optimization process for the Body (B) defect case (video speed increased for better demonstration):**
+**Demo: one optimization iteration for the Body (B) defect case.**
 
 https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 
----
+## Workflow
 
+![Optimization loop](assets/optimization_loop.jpg)
 
+The optimization loop generates a candidate reconstruction, remeshes the
+geometry, runs a chewing simulation, evaluates apposition and safety metrics,
+and sends the cost back to the Bayesian optimizer.
 
-## 2. Prerequisites
+## Patient-Specific Modeling
 
-Before installing and running the framework, ensure your system meets the following requirements (tested on Windows 10; currently only compatible with Windows):
+![Patient-specific modeling pipeline](assets/patient_specific_modeling.jpg)
 
-- **[JDK 8 or Higher](https://www.oracle.com/java/technologies/downloads/) and [Eclipse IDE](https://eclipseide.org/)**  
-  
-- **[Artisynth](https://www.artisynth.org/Main/HomePage) Components:**  
-  - Artisynth Core  
-  - Artisynth VSP  
-  - Artisynth Jaw Model  
-  *(Note: Artisynth VSP and Artisynth Jaw Model are included within this repository.)*
+The patient-specific layer is a preprocessing step. It registers the generic
+template model to CT-derived patient anatomy, transfers muscle and ligament
+attachments, updates muscle and ligament parameters, adapts the TMJ soft
+tissues, and then passes the resulting digital twin to the same optimization
+loop.
 
-- **[MATLAB](https://www.mathworks.com/products/matlab.html)**  
+Main entry point:
 
-- **Python (via [Anaconda](https://www.anaconda.com/download)) and [PyMeshLab](https://pymeshlab.readthedocs.io/en/latest/installation.html) Library**  
-
----
-
-## 3. Installation Instructions
-
-### 3.1 Java and Eclipse Setup
-
-1. **Install JDK 8 or Higher (64-bit):**  
-   ArtiSynth requires a full 64-bit Java Development Kit (JDK) with a Java compiler—using only a Java Runtime Environment (JRE) is not sufficient.  
-   - **Download:** We recommend installing a JDK from Oracle. Visit [Oracle Java Downloads](https://www.oracle.com/java/technologies/downloads/) and choose the appropriate installer for your system. For Windows, the easiest option is often the “x64 Installer.”  
-   - **Note for JDK Versions:**  
-     - For ARM-based Windows systems, you must still install a 64-bit Intel-based JDK (look for “x64” in the download name) to run via the Intel compatibility layer.
-
-2. **Verify the JDK Installation:**  
-   Open a CMD window and run:
-   ```bash
-   javac -version
-
-3. **Install Eclipse:**
-   - Donwload and install [Eclipse IDE](https://eclipseide.org/)
-   - Open **Window > Preferences** from the main menu.
-   - In the Preferences dialog, go to **Java > Installed JREs** and click Add....
-   - In the JRE Type dialog, keep **Standard VM** selected and click Next.
-   - In the JRE Definition dialog, enter the JDK installation folder
-
-### 3.2 Artisynth Components
-
-4. **Download Required Repositories:** Open Eclipse and import the GitHub project using **File → Import → Projects from Git → Clone URI**.
-
-   - **Artisynth Core:**  
-     The current development version of `artisynth_core` is available from GitHub. To clone it, use the following URL in Eclipse:
-     ```bash
-     https://github.com/artisynth/artisynth_core.git
-     ```
-
-   - **Artisynth VSP & Artisynth Jaw Model:**  
-     These components are included in this repository. You can find them in the `artisynth_VSP` and `artisynth_JawModel` directories.
-
-
-5. **Configure Projects:**  
-   - Set the run configuration for `artisynth_core` so that it has access to the two supporting libraries.
-   - Adjust the build settings for each supporting library to ensure they are visible during runtime.
-   - Launch the `artisynth_core` application and add the models by selecting **Models -> Edit Menu -> Add Packages**.
-   - Then, go to **Settings -> External Classpath -> Add Class Folder** and add the folders for `artisynth_VSP` and `artisynth_JawModel` separately to ensure they are visible externally through MATLAB.
-
-For more information on additional details, visit [Artisynth Webpage](https://www.artisynth.org/Software/ModelsDownload).
-
-### 3.3 MATLAB Integration
-
-6. **Set External Class Path:**  
-    Install and open MATLAB. Then add the `artisynth_core` MATLAB folder to your path so that Java classes are available. For example:
-  
-```matlab
-addpath(fullfile('path','to','artisynth_core','matlab'));
+```text
+artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/Registration_Artisynth_Main.m
 ```
 
-7. **Environment Variable:**  
- - Set the `ARTISYNTH_HOME` environment variable to the path where `artisynth_core` is installed. Then set the Artisynth class path in MATLAB using:
+Detailed notes are in:
+
+```text
+artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md
+```
+
+Patient CT data, patient meshes, generated registration JSON files, temporary
+OBJs, PNGs, and MATLAB cache files are intentionally excluded from git.
+
+## Repository Layout
+
+- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
+  optimization scripts.
+- `artisynth_JawModel/src/artisynth/JawModel/matlab/` - generic optimization
+  entry points.
+- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
+  patient-specific model construction code.
+- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
+
+## Requirements
+
+- Windows
+- JDK 8 or higher
+- Eclipse IDE
+- ArtiSynth Core
+- MATLAB
+- Python or Anaconda with `numpy`, `scipy`, `trimesh`, `open3d`, `pycpd`, and
+  `pymeshlab`
+
+Set `ARTISYNTH_HOME` to the local `artisynth_core` checkout, then in MATLAB:
 
 ```matlab
+addpath(fullfile(getenv('ARTISYNTH_HOME'), 'matlab'));
 setArtisynthClasspath(getenv('ARTISYNTH_HOME'));
 ```
 
-### 3.4 Python Environment Setup
+## Running
 
-8. **Install Python via Anaconda:**  
-   Create and activate a Python 3.8 environment (or a compatible version) using the following commands:
-   ```bash
-   conda create -n matlab_env python=3.8
-   conda activate matlab_env
+Generic optimization:
 
-9. **Install PyMeshLab:**  
-   With the environment activated, install PyMeshLab:
-   ```bash
-   pip3 install pymeshlab
+```text
+artisynth_JawModel/src/artisynth/JawModel/matlab
+```
 
-10. **Connect MATLAB to Python:**  
-    In MATLAB, configure the Python executable for your Anaconda environment (e.g., an environment named "matlab_env") by running:
-    
-    ```matlab
-    pyenv('Version', 'C:\path\to\anaconda3\envs\matlab_env\python.exe')
-    ```
-    
-    Replace `C:\path\to\anaconda3\envs\matlab_env\python.exe` with the full path to your Python executable for the desired environment.
+Run `MainOneSegment.m`, `MainTwoSegment.m`, or the manual defect scripts
+`BDefectManual.m`, `SDefectManual.m`, and `RBDefectManual.m`.
 
+Patient-specific model construction:
 
-11. **Increase Java Heap Memory in MATLAB:**  
-    Navigate to **Home → Preferences → General → Java Heap Memory** in MATLAB and increase the allocated memory if needed.
+```text
+artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab
+```
 
----
+Place private geometry inputs in `../geometry`, create a local `PCSA.txt` from
+`PCSA.example.txt`, and run:
 
-## 4. Execution
+```matlab
+Registration_Artisynth_Main
+```
 
-- **Running the Framework:**  
-  - Locate the `matlab` folder within `Artisynth_JawModel`.
-  - To run the optimization for a one-segment case, execute `MainOneSegment.m`. The defect type can be chosen within the code (options: Body (B) or Symphysis (S)).
-  - To run the optimization for a two-segment case (e.g., Ramus and Body (RB)), execute `MainTwoSegment.m`.
-  - To test the three-stage workflow for a single iteration, you can run `BDefectManual.m`, `SDefectManual.m`, or `RBDefectManual.m`.
+## Ethics and Data Access
 
----
+Patient-specific CT volumes, meshes, and derived registration outputs are not
+included due to ethics and privacy constraints.
 
-## 5. Ethics and Data Access
+## License
 
- **Important:**  Due to ethical considerations, the patient-specific mesh file is not included in this repository. Additionally, some parameter values in this repository may differ from those reported in the paper due to ongoing experimental adjustments and fine-tuning during development.
-
-## 6. License
-
-This project is licensed under the GNU General Public License v3. See the [LICENSE](LICENSE) file for details.  Please do not redistribute the current version, as it is intended for review purposes only.
-
----
+This project is licensed under the GNU General Public License v3. See
+[LICENSE](LICENSE) for details. Please do not redistribute the current version,
+as it is intended for review purposes only.
