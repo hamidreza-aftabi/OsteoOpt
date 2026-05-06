@@ -231,8 +231,14 @@ function loss = runArtisynthSimTwo(params)
     end
 
     % Calculate the loss
+    L  = mean(left_percent(:,2));
+    R  = mean(right_percent(:,2));
+    M0 = mean(mid0_percent(:,2));
+    M1 = mean(mid1_percent(:,2));
 
-    loss1 = - (0.5*(mean(left_percent(:,2)) + min(mean(mid0_percent(:,2)),mean(mid1_percent(:,2)))) - 0.499 *abs(mean(left_percent(:,2)) - min(mean(mid0_percent(:,2)),mean(mid1_percent(:,2)))));
+    M = min(M0, M1);
+
+    loss1 = -((L + R + M) - 0.499*( abs(L-R) + abs(L-M) + abs(R-M) ));
 
 
      if loss1 == 0.00 || isnan (loss1)

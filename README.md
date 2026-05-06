@@ -31,9 +31,6 @@ artisynth_JawModel/src/artisynth/JawModel/matlab/MainOneSegment.m
 artisynth_JawModel/src/artisynth/JawModel/matlab/MainTwoSegment.m
 ```
 
-Manual single-iteration checks are available in `BDefectManual.m`,
-`SDefectManual.m`, and `RBDefectManual.m`.
-
 ## Patient-Specific Modeling
 
 ![Patient-specific modeling pipeline](assets/patient_specific_modeling.jpg)
