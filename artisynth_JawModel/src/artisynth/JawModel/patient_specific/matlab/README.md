@@ -20,7 +20,7 @@ workflow.
 4. Registers condyle/fossa regions and applies anatomy-guided disc and capsule
    adaptation.
 5. Updates muscle insertion/origin landmarks, hyoid position, condyle markers,
-   ligament markers, muscle length parameters, PCSA-derived muscle forces, and
+   ligament markers, muscle length parameters, SCSA-derived muscle forces, and
    ligament rest lengths.
 
 ## Required Local Inputs
@@ -31,8 +31,9 @@ Before running, place the patient geometry inputs in:
 ../geometry/
 ```
 
-Create a local `PCSA.txt` beside these scripts using `PCSA.example.txt` as the
-format. The values should come from the CT-derived PCSA estimation step.
+Create a local `SCSA.txt` beside these scripts using `SCSA.example.txt` as the
+format. `calculateFMAX.m` converts CT-derived SCSA values to `FMAX.txt`, and
+`modifyFMAX.m` applies those forces to the ArtiSynth muscles.
 
 Use the Anaconda Python environment configured in the root README. The Python
 libraries called from MATLAB are listed in `requirements.txt`, including the

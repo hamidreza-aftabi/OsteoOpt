@@ -1,12 +1,12 @@
-#connection_mesh "connection.obj"
+# One-segment body list.
+# For two-segment reconstruction, uncomment donor_mesh1 and screw1.
 #donor_mesh1 "donor_opt1.obj"
+#screw1 "screw_opt1_remeshed.obj"
 donor_mesh0 "donor_opt0.obj"
 skull "skull_with_cartilage.obj"
 jaw "resected_mandible_l_opt_remeshed.obj"
 jaw_resected "resected_mandible_r_opt_remeshed.obj"
 screw0 "screw_opt0_remeshed.obj"
-#screw1 "screw_opt1_remeshed.obj"
-#plate "plate_opt_remeshed.obj"
 hyoid "hyoid.obj"
 vertebrae "vertebrae.obj"
 skull_cartilage_right "cartilage_skull_right.obj"

@@ -31,9 +31,6 @@ artisynth_JawModel/src/artisynth/JawModel/matlab/MainOneSegment.m
 artisynth_JawModel/src/artisynth/JawModel/matlab/MainTwoSegment.m
 ```
 
-Manual single-iteration checks are available in `BDefectManual.m`,
-`SDefectManual.m`, and `RBDefectManual.m`.
-
 ## Patient-Specific Modeling
 
 ![Patient-specific modeling pipeline](assets/patient_specific_modeling.jpg)
@@ -83,8 +80,8 @@ Tested on Windows.
    pyenv('Version', 'C:\path\to\anaconda3\envs\osteoopt\python.exe')
    ```
 
-Patient-specific PCSA estimation also requires CT muscle segmentation before
-running the registration/model-construction script.
+Patient-specific muscle-force estimation also requires CT muscle segmentation
+before running the registration/model-construction script.
 
 ## Running
 
@@ -104,7 +101,7 @@ artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab
 ```
 
 Place the required patient geometry inputs in `../geometry`, create a local
-`PCSA.txt` from `PCSA.example.txt`, and run:
+`SCSA.txt` from `SCSA.example.txt`, and run:
 
 ```matlab
 Registration_Artisynth_Main
