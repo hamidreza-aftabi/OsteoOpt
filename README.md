@@ -16,6 +16,20 @@ Paper: [arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 
 https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 
+## Repository Layout
+
+- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
+  optimization scripts.
+- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
+  patient-specific registration and model-construction scripts.
+- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
+- `assets/` - README figures.
+
+## Ethics and Data Access
+
+Patient-specific CT volumes and meshes are not included due to ethics and
+privacy constraints.
+
 ## Optimization Workflow
 
 ![Optimization loop](assets/optimization_loop.jpg)
@@ -113,20 +127,6 @@ Place the required patient geometry inputs in `../geometry`, create a local
 ```matlab
 Registration_Artisynth_Main
 ```
-
-## Repository Layout
-
-- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
-  optimization scripts.
-- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
-  patient-specific registration and model-construction scripts.
-- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
-- `assets/` - README figures.
-
-## Ethics and Data Access
-
-Patient-specific CT volumes and meshes are not included due to ethics and
-privacy constraints.
 
 ## Citation
 
