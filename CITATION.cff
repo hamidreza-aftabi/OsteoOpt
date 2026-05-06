@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use OsteoOpt++, please cite the arXiv paper."
+title: "OsteoOpt++"
+type: software
+authors:
+  - family-names: Aftabi
+    given-names: Hamidreza
+  - family-names: Lloyd
+    given-names: John E.
+  - family-names: Ding
+    given-names: Amanda
+  - family-names: Sagl
+    given-names: Benedikt
+  - family-names: Prisman
+    given-names: Eitan
+  - family-names: Hodgson
+    given-names: Antony
+  - family-names: Fels
+    given-names: Sidney
+repository-code: "https://github.com/hamidreza-aftabi/OsteoOpt"
+url: "https://arxiv.org/abs/2605.01084"
+date-released: "2026-05-01"
+license: "PolyForm-Noncommercial-1.0.0"
+preferred-citation:
+  type: article
+  title: "Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union"
+  authors:
+    - family-names: Aftabi
+      given-names: Hamidreza
+    - family-names: Lloyd
+      given-names: John E.
+    - family-names: Ding
+      given-names: Amanda
+    - family-names: Sagl
+      given-names: Benedikt
+    - family-names: Prisman
+      given-names: Eitan
+    - family-names: Hodgson
+      given-names: Antony
+    - family-names: Fels
+      given-names: Sidney
+  journal: "arXiv preprint arXiv:2605.01084"
+  date-published: "2026-05-01"
+  url: "https://arxiv.org/abs/2605.01084"
