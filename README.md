@@ -81,7 +81,8 @@ Tested on Windows.
    ```
 
 Patient-specific muscle-force estimation also requires CT muscle segmentation
-before running the registration/model-construction script.
+before running the registration/model-construction script. **The CT muscle
+segmentation code will be added soon.**
 
 ## Running
 
@@ -93,6 +94,11 @@ artisynth_JawModel/src/artisynth/JawModel/matlab
 
 Run `MainOneSegment.m` for one-segment defects or `MainTwoSegment.m` for
 two-segment defects.
+
+The ArtiSynth mesh/body mapping is defined in
+`artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt`. The checked-in
+list is for one-segment reconstruction; for two-segment reconstruction,
+uncomment `donor_mesh1` and `screw1`.
 
 For patient-specific registration/model construction, open MATLAB in:
 
