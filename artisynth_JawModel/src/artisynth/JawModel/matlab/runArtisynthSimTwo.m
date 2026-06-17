@@ -238,8 +238,7 @@ function loss = runArtisynthSimTwo(params)
 
     M = min(M0, M1);
 
-    loss1 = -((L + R + M) - 0.499*( abs(L-R) + abs(L-M) + abs(R-M) ));
-
+    loss1 = -0.5*((L + R + M) - ( abs(L-R) + abs(L-M) + abs(R-M)));
 
      if loss1 == 0.00 || isnan (loss1)
         disp('Zeros/Nan loss...');
