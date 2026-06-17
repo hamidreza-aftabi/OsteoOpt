@@ -236,8 +236,8 @@ function loss = runArtisynthSim(params)
     end
 
 
-    loss1 = - (0.5*(mean(left_percent(:,2)) + mean(right_percent(:,2))) - 0.4999 *abs(mean(left_percent(:,2)) - mean(right_percent(:,2)))) + .0001;
-   
+    loss1 = - (0.5*(mean(left_percent(:,2)) + mean(right_percent(:,2))) - 0.5 *abs(mean(left_percent(:,2)) - mean(right_percent(:,2))));
+
     if loss1 == 0.00 || isnan (loss1)
         disp('Zeros/Nan loss...');
         fileID = fopen(logFile, 'a');
