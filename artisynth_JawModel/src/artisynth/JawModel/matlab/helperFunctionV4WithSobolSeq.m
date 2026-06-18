@@ -5,7 +5,7 @@ function results = helperFunctionV4WithSobolSeq(results, currentIteration)
 
     defectType = 'B';  % Set defect type ('B' or 'S')
     trial = 1;
-    resultsFile = ['One_Segment' defectType '_Defect_Trial_' num2str(trial) '.mat'];
+    resultsFile = ['One_Segment_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
 
     % Define the range of variables and initial points based on defectType
     if defectType == "B"
