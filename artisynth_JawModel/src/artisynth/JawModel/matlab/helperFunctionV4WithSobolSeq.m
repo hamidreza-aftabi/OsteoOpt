@@ -9,26 +9,26 @@ function results = helperFunctionV4WithSobolSeq(results, currentIteration)
 
     % Define the range of variables and initial points based on defectType
     if defectType == "B"
-        zOffsetRange = [-2, 5];
+        zOffsetRange = [-3.5, 3.5];
         leftRollRange = [-25, 25];
         leftPitchRange = [-25, 25];
         rightRollRange = [-20, 20];
         rightPitchRange = [-20, 20];
-        initialPoints = [-1.82, 24.2, 20.4, 19.98, 18.7];  % Initial point for defect 'B'
+        initialPoints = [0,0,0,0,0];  % Initial point for defect 'B'
 
 
     elseif defectType == "S"
-        zOffsetRange = [-7, 3];
-        leftRollRange = [-10, 10];
+        zOffsetRange = [-5, 5];
+        leftRollRange = [-15, 15];
         leftPitchRange = [-15, 15];
-        rightRollRange = [-10, 10];
+        rightRollRange = [-15, 15];
         rightPitchRange = [-15, 15];
-        initialPoints = [];  % Initial point for defect 'S'
+        initialPoints = [0,0,0,0,0];  % Initial point for defect 'S'
     end
 
 
-    % Use Sobol Sequence to generate 19 new sample points (20 total with initial point)
-    numSamples = 50;  % Number of additional samples to generate (19 + 1 initial point = 20)
+    % Use Sobol Sequence to generate 25 new sample points (26 total with initial point)
+    numSamples = 25;  % Number of additional samples to generate (19 + 1 initial point = 20)
     numVariables = 5; % Number of variables to sample
     
     % Define the variable ranges
@@ -49,7 +49,7 @@ function results = helperFunctionV4WithSobolSeq(results, currentIteration)
     %initialTablePoint = array2table(initialPoints, 'VariableNames', varsNames);
     
     % Combine the initial point with the Sobol-generated points
-    initialTable = additionalTable;  % Concatenating tables
+    initialTable = [initialTablePoint; additionalTable];    
     
     % Debugging output to confirm function execution
     disp(['Helper function started with defect type ' defectType ' and Sobol sampling with']);
