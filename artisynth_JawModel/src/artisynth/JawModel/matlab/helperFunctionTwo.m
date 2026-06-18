@@ -17,10 +17,10 @@ function results = helperFunctionTwo(results, currentIteration)
     leftPitchRange = [-25, 25];
     rightRollRange = [-15, 15];
     rightPitchRange = [-15, 15];
-    initialPoints = [-5, 0, 20, 20, 0, 0];  % Initial point 
+    initialPoints = [0, 0, 0, 0, 0, 0];  % Initial point 
 
-    % Use Latin Hypercube Sampling to generate 19 new sample points (20 total with initial point)
-    numSamples = 20;  % Number of additional samples to generate (19 + 1 initial point = 20)
+    % Use Latin Hypercube Sampling to generate 25 new sample points (26 total with initial point)
+    numSamples = 25;  % Number of additional samples to generate (19 + 1 initial point = 20)
     numVariables = 6; % Number of variables to sample
 
     % Define the variable ranges
@@ -35,14 +35,14 @@ function results = helperFunctionTwo(results, currentIteration)
     scaledSamples = bsxfun(@plus, varRanges(:, 1)', bsxfun(@times, sobolSamples, diff(varRanges, [], 2)'));
     
 
-    % Convert the LHS samples to a table for Bayesian optimization
+    % Convert the Sobol samples to a table for Bayesian optimization
     varsNames = {'zOffset', 'rdpOffset' 'leftRoll', 'leftPitch', 'rightRoll', 'rightPitch'};
     additionalTable = array2table(scaledSamples, 'VariableNames', varsNames);
 
     % Convert the initial points to a table
     initialTablePoint = array2table(initialPoints, 'VariableNames', varsNames);
 
-    % Combine the initial point with the LHS-generated points
+    % Combine the initial point with the Sobol-generated points
     initialTable = [initialTablePoint; additionalTable];  % Concatenating tables
 
     % Debugging output to confirm function execution
