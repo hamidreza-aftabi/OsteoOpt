@@ -2,13 +2,13 @@
 clear all;
 
 defectType = 'RB';
-trial = 4;
+trial = 2;
 
 resultsFile = ['Final_Result_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
 
 
 % Number of total iterations
-totalIterations = 50;
+totalIterations = 75;
 
 
 
