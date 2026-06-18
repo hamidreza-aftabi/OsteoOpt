@@ -64,14 +64,11 @@ function loss = runArtisynthSim(params)
             init_angle_r = 144.41;
 
      elseif defectType == "S"
-            %init_axis_l =[ 0.30742 -0.93415 0.18128];
-            %init_angle_l = 105.46;
+            % Left Plane
             init_axis_l = [0.30742 -0.93415 0.18128];
             init_angle_l =  105.46;
         
             % Right Plane
-            %init_axis_r = [0.73745 -0.29537 0.60739];
-            %init_angle_r =  157.51;
             init_axis_r = [0.72239 -0.29051 0.6275]; 
             init_angle_r = 156.63;
 
