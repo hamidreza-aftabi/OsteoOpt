@@ -3,7 +3,7 @@ clear all;
 
 defectType = 'B';
 trial = 1;
-resultsFile = ['One_Segment' defectType '_Defect_Trial_' num2str(trial) '.mat'];
+resultsFile = ['One_Segment_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
 
 % Number of total iterations
 totalIterations = 75;
