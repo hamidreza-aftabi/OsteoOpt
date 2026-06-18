@@ -7,7 +7,7 @@ function results = helperFunctionTwo(results, currentIteration)
     defectType = 'RB'; 
     trial = 1;
 
-    resultsFile = ['Final_Result_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
+    resultsFile = ['Two_Segment_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
 
     % Define the range of variables and initial points based on defectType
     
