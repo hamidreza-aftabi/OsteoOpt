@@ -47,8 +47,6 @@ function loss = runArtisynthSimTwo(params)
 
 
     if defectType == "RB"
-
-        % Calculate the new resection plane
     
         % Left Plane
         init_axis_l = [-0.35978 -0.83742 -0.41145];
@@ -61,12 +59,6 @@ function loss = runArtisynthSimTwo(params)
     
 
     end
-
-    % Change resection file
-    %input_filename = 'resection_plane_initial.txt';
-    %output_filename = 'resection_plane_optimize.txt';
-
-    %modify_normals_in_file(input_filename, output_filename, plane_normal_l, plane_normal_r);
    
 
     % Set up Artisynth environment and run simulation
