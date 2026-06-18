@@ -6,7 +6,7 @@ trial = 1;
 resultsFile = ['Sobol_Final_Result_Sensitivity_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
 
 % Number of total iterations
-totalIterations = 50;
+totalIterations = 75;
 
 
 
