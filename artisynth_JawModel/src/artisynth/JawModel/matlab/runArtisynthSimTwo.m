@@ -4,9 +4,9 @@ function loss = runArtisynthSimTwo(params)
     trial = 1;
     Safety_On = false;
 
-    resultsFile = ['Finl_Result_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
-    PercentFile = ['Final_Percent_' defectType '_Defect_Trial_' num2str(trial) '.txt'];
-    logFile = ['Final_Log_' defectType '_Defect_Trial_' num2str(trial) '.txt'];
+    resultsFile = ['Two_Segment_' defectType '_Defect_Trial_' num2str(trial) '.mat'];
+    PercentFile = ['Two_Segment_Percent_' defectType '_Defect_Trial_' num2str(trial) '.txt'];
+    logFile = ['Two_Segment_Log_' defectType '_Defect_Trial_' num2str(trial) '.txt'];
     
 
     if   Safety_On == true
