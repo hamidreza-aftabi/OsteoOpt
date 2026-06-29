@@ -1,5 +1,5 @@
 % Define muscle names
-muscleNames = {'rad' 'lad', 'rat', 'lat', 'rmt', 'lmt', 'rpt', 'lpt', 'rsm', 'lsm', 'rdm', 'ldm', 'rmp', 'lmp', 'rsp', 'lsp', 'rip', 'lip', 'lad', 'lam', 'rpm', 'lpm', 'rgh', 'lgh'};
+muscleNames = {'rad', 'lad', 'rat', 'lat', 'rmt', 'lmt', 'rpt', 'lpt', 'rsm', 'lsm', 'rdm', 'ldm', 'rmp', 'lmp', 'rsp', 'lsp', 'rip', 'lip', 'ram', 'lam', 'rpm', 'lpm', 'rgh', 'lgh'};
 
 % Open a file to save muscle data
 fileID = fopen('muscle_points.txt', 'w');
