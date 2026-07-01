@@ -21,10 +21,6 @@ np.random.seed(0)
 current_dir = Path().resolve()
 geometry_dir = current_dir.parent / "geometry"
 
-#source_path = str(geometry_dir / "cartilage_mandible_left2.obj")
-#target_path = str(geometry_dir / "Rigid_Registered_Mandible_Solid_Smooth_Remeshed_Cartilage_left.obj")
-#out_path = str(geometry_dir / "condyle_left_deformed_fixed.obj")
-#params_file = str(current_dir / "registration_pipeline_condyle_left.json")
 
 source_path = str(geometry_dir / "cartilage_skull_left.obj")
 target_path = str(geometry_dir / "Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_Cartilage_left.obj")
