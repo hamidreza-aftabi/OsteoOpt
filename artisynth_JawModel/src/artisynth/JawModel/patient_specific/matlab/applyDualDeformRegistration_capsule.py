@@ -12,7 +12,7 @@ from scipy.spatial import cKDTree
 # Allowed: "left" or "right"
 SIDE = "right"
 
-CURRENT_DIR = Path(__file__).resolve().parent
+CURRENT_DIR = Path().resolve()
 GEOMETRY_DIR = CURRENT_DIR.parent / "geometry"
 
 # File paths (edit here)
