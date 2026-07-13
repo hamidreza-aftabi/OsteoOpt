@@ -10,13 +10,16 @@ framework for mandibular reconstruction. It combines virtual surgical planning,
 ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
 
-## To-Do List
-
-* [ ] Add the total segmentation code for the four masticatory muscle segmentations.
-* [ ] Add the resection plane definition for PCSA calculation.
-
 Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
+
+## To-Do List
+
+* [x] ~~Fix bugs in the two cost functions.~~
+* [x] ~~Fix bugs in the capsule-based dual deformable registration.~~
+* [ ] Add the complete segmentation code for the four masticatory muscles.
+* [ ] Add the resection-plane definition for PCSA calculation.
+* [ ] Provide example geometry files and document the component-naming conventions.
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
