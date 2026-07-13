@@ -5,10 +5,15 @@
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-under%20reconstruction-yellow.svg)](#)
 
-OsteoOpt++ is the extended arXiv version of OsteoOpt, an image-to-decision
+OsteoOpt++ is the extended version of OsteoOpt, an image-to-decision
 framework for mandibular reconstruction. It combines virtual surgical planning,
 ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
+
+## To-Do List
+
+* [ ] Add the total segmentation code for the four masticatory muscle segmentations.
+* [ ] Add the resection plane definition for PCSA calculation.
 
 Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
@@ -19,12 +24,12 @@ https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
 
 ## Repository Layout
 
-- `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
+* `artisynth_JawModel/` - ArtiSynth jaw model, simulation code, and MATLAB
   optimization scripts.
-- `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
+* `artisynth_JawModel/src/artisynth/JawModel/patient_specific/` -
   patient-specific registration and model-construction scripts.
-- `artisynth_VSP/` - virtual surgical planning and reconstruction components.
-- `assets/` - README figures.
+* `artisynth_VSP/` - virtual surgical planning and reconstruction components.
+* `assets/` - README figures.
 
 ## Optimization Workflow
 
@@ -62,6 +67,7 @@ artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/Registration_A
 Tested on Windows.
 
 1. Install **JDK 8 or higher** and **Eclipse IDE**.
+
 2. Clone **ArtiSynth Core**:
 
    ```text
@@ -70,6 +76,7 @@ Tested on Windows.
 
 3. In Eclipse/ArtiSynth, add the model packages and make `artisynth_VSP` and
    `artisynth_JawModel` visible on the external classpath.
+
 4. Set `ARTISYNTH_HOME` to the local `artisynth_core` checkout. In MATLAB:
 
    ```matlab
