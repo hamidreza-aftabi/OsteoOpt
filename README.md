@@ -17,9 +17,9 @@ Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/
 
 * [x] ~~Fix bugs in the two cost functions.~~
 * [x] ~~Fix bugs in the capsule-based dual deformable registration.~~
+* [ ] [ ] Provide example geometry files and document the component-naming conventions.
 * [ ] Add the complete segmentation code for the four masticatory muscles.
 * [ ] Add the resection-plane definition for PCSA calculation.
-* [ ] Provide example geometry files and document the component-naming conventions.
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
