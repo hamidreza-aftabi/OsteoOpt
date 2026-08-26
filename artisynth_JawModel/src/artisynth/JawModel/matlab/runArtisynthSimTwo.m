@@ -63,7 +63,7 @@ function loss = runArtisynthSimTwo(params)
 
     % Set up Artisynth environment and run simulation
     try
-        ah = artisynth('-model', 'artisynth.istar.reconstruction.MandibleRecon');
+        ah = artisynth('-model', 'artisynth.VSP.reconstruction.MandibleRecon');
         if isempty(ah)
             error('Failed to initialize Artisynth.');
         end
@@ -168,7 +168,7 @@ function loss = runArtisynthSimTwo(params)
 
     % Run the second Artisynth model
     try
-        ah1 = artisynth('-model', 'artisynth.istar.TMJModel.JawTMJ.JawFemDemoOptimizeTwoWithSafety');
+        ah1 = artisynth('-model', 'artisynth.JawModel.JawFemDemoOptimizeTwoWithSafety');
         if isempty(ah1)
             error('Failed to initialize the second Artisynth instance.');
         end
