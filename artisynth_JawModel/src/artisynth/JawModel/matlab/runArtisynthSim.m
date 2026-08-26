@@ -193,7 +193,7 @@ function loss = runArtisynthSim(params)
 
     % Run the second Artisynth model
     try
-        ah1 = artisynth('-model', 'artisynth.istar.TMJModel.JawTMJ.JawFemDemoOptimize');
+        ah1 = artisynth('-model', 'artisynth.JawModel.JawFemDemoOptimize');
         if isempty(ah1)
             error('Failed to initialize the second Artisynth instance.');
         end
