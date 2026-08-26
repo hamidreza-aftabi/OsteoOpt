@@ -77,7 +77,7 @@ function loss = runArtisynthSim(params)
 
     % Set up Artisynth environment and run simulation
     try
-        ah = artisynth('-model', 'artisynth.istar.reconstruction.MandibleRecon');
+        ah = artisynth('-model', 'artisynth.VSP.reconstruction.MandibleRecon');
         if isempty(ah)
             error('Failed to initialize Artisynth.');
         end
