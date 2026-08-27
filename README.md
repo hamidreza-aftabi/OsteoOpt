@@ -10,8 +10,8 @@ framework for mandibular reconstruction. It combines virtual surgical planning,
 ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
 
-Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 Final journal version: accepted in *Medical Image Analysis*; link will be added soon.
+Extended arXiv version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
 ## News and Highlights 🎉
