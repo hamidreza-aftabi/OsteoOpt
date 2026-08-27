@@ -1,12 +1,13 @@
-# One-segment body list.
-# For two-segment reconstruction, uncomment donor_mesh1 and screw1.
-#donor_mesh1 "donor_opt1.obj"
-#screw1 "screw_opt1_remeshed.obj"
+# Optimization only (active): uses the generic template-model geometry.
+# For one segment, comment out donor_mesh1 and screw1.
+# For two segments, keep donor_mesh0, donor_mesh1, screw0, and screw1 active.
+donor_mesh1 "donor_opt1.obj"
 donor_mesh0 "donor_opt0.obj"
 skull "skull_with_cartilage.obj"
 jaw "resected_mandible_l_opt_remeshed.obj"
 jaw_resected "resected_mandible_r_opt_remeshed.obj"
 screw0 "screw_opt0_remeshed.obj"
+screw1 "screw_opt1_remeshed.obj"
 hyoid "hyoid.obj"
 vertebrae "vertebrae.obj"
 skull_cartilage_right "cartilage_skull_right.obj"
@@ -15,3 +16,21 @@ mandible_cartilage_right "cartilage_mandible_right.obj"
 mandible_cartilage_left "cartilage_mandible_left.obj"
 disc_right_rigid "disc_right.obj"
 disc_left_rigid "disc_left.obj"
+# Registration followed by optimization (inactive): uses the registration outputs.
+# Comment out the optimization-only block and uncomment this block.
+# Activate only the donor and screw entries produced for the selected reconstruction.
+#deformed_jaw "Deformable_Registered_Mandible_Solid_Smooth_Remeshed_With_Cartilage.obj"
+#deformed_skull "Deformable_Registered_Maxilla_Solid_Smooth_Remeshed_With_Cartilage.obj"
+#plate0 "Rigid_Registered_plate_opt.obj"
+#donor_mesh0 "Remeshed_Hollowed_Simplified_Rigid_Registered_donor_opt0_remeshed.obj"
+#skull "Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_With_Cartilage.obj"
+#jaw "Rigid_Registered_resected_mandible_l_opt_remeshed.obj"
+#jaw_resected "Rigid_Registered_resected_mandible_r_opt_remeshed.obj"
+#skull_cartilage_right "Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_Cartilage_Right.obj"
+#skull_cartilage_left "Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_Cartilage_Left.obj"
+#mandible_cartilage_right "Rigid_Registered_Mandible_Solid_Smooth_Remeshed_Cartilage_Right.obj"
+#mandible_cartilage_left "Rigid_Registered_Mandible_Solid_Smooth_Remeshed_Cartilage_Left.obj"
+#disc_right_rigid "disc_dual_deformed_right.obj"
+#disc_left_rigid "disc_dual_deformed_left.obj"
+#hyoid "hyoid.obj"
+#vertebrae "vertebrae.obj"
