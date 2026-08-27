@@ -67,6 +67,8 @@ artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/Registration_A
 
 See the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md) for detailed inputs and configuration.
 
+For optimization-only or registration-plus-optimization geometry files, check [`bodyList.txt`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt).
+
 ## Setup
 
 Tested on Windows.
@@ -112,8 +114,6 @@ artisynth_JawModel/src/artisynth/JawModel/matlab
 
 Run `MainOneSegment.m` for one-segment defects or `MainTwoSegment.m` for
 two-segment defects.
-
-For optimization-only or registration-plus-optimization geometry files, check [`bodyList.txt`](artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt).
 
 For patient-specific registration/model construction, open MATLAB in:
 
