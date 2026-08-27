@@ -11,9 +11,10 @@ ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
 
 Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
+Final journal version: accepted in *Medical Image Analysis*; link will be added soon.
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
-## Updates
+## News and Highlights 🎉
 
 * **August 17, 2026** - Extended version accepted in *Medical Image Analysis* (Impact Factor: 14).
 * **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award.
@@ -123,14 +124,11 @@ For patient-specific registration/model construction, open MATLAB in:
 artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab
 ```
 
-Place the required patient geometry inputs in `../../geometry`, place `CT.nrrd`
-and `SCSA_landmarks.json` in `inputs/`, and run:
+Follow the input instructions in the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md), then run:
 
 ```matlab
 Registration_Artisynth_Main
 ```
-
-See the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md) for detailed inputs and configuration.
 
 ## Citation
 
@@ -173,3 +171,6 @@ the required copyright notice.
 
 Patient-specific CT volumes and meshes are not included due to ethics and
 privacy constraints.
+
+Parameter values in this repository may differ from those used in the
+publications because the codebase continues to support ongoing experiments.
