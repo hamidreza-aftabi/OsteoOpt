@@ -1,6 +1,0 @@
-numpy
-scipy
-trimesh
-open3d
-pymeshlab
-git+https://github.com/siavashk/pycpd.git
