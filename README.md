@@ -67,8 +67,6 @@ artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/Registration_A
 
 See the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md) for detailed inputs and configuration.
 
-For optimization-only or registration-plus-optimization geometry files, check [`bodyList.txt`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt).
-
 ## Setup
 
 Tested on Windows.
@@ -126,6 +124,8 @@ Follow the input instructions in the [registration README](artisynth_JawModel/sr
 ```matlab
 Registration_Artisynth_Main
 ```
+
+For optimization-only or registration-plus-optimization geometry files, check [`bodyList.txt`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt).
 
 ## Citation
 
