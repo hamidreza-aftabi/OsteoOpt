@@ -18,15 +18,12 @@ Place these files in `inputs/`:
 
 `SCSA_landmarks.json` must use RAS or LPS coordinates in millimetres and contain:
 
-```text
-F_2-1
-F_2-2
-F_2-3
-Mandible Angle-1
-Mandible Angle-2
-Lateral Pole-1
-Lateral Pole-2
-```
+- `F_2-1`, `F_2-2`, `F_2-3`: three fiducial points defining the Frankfort
+  horizontal plane.
+- `Mandible Angle-1`, `Mandible Angle-2`: left and right mandibular-angle
+  points.
+- `Lateral Pole-1`, `Lateral Pole-2`: left and right condylar lateral-pole
+  points.
 
 The following files are read from `../../geometry/`:
 

@@ -3,9 +3,9 @@
 Required landmark JSON keys:
     coordinateSystem: "RAS" or "LPS"
     units: "mm"
-    F_2-1, F_2-2, F_2-3
-    Mandible Angle-1, Mandible Angle-2
-    Lateral Pole-1, Lateral Pole-2
+    F_2-1, F_2-2, F_2-3: Frankfort horizontal plane points
+    Mandible Angle-1, Mandible Angle-2: left/right mandibular-angle points
+    Lateral Pole-1, Lateral Pole-2: left/right condylar lateral-pole points
 
 Use --neighboring-planes to measure the reference plane and ten parallel planes
 at offsets -5 to -1 mm and +1 to +5 mm and retain the largest area.
