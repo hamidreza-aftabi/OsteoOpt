@@ -102,6 +102,13 @@ Tested on Windows.
    pyenv('Version', 'C:\path\to\anaconda3\envs\osteoopt\python.exe')
    ```
 
+6. Patient-specific registration also requires 3D Slicer with the
+   TotalSegmentator extension and its dependencies initialized. Set
+   `SLICER_EXECUTABLE` to the full path of `Slicer.exe`; see the
+   [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md)
+   for details. This setup is recommended because the extension installs its
+   dependencies; a fully independent PyTorch implementation is also possible.
+
 ## Running
 
 For generic optimization, open MATLAB in:
