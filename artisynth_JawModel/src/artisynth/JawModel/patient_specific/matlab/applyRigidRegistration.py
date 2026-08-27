@@ -7,7 +7,7 @@ import json
 # Setup file paths
 # -------------------------
 current_dir = Path().resolve()
-geometry_dir = current_dir.parent / "geometry"
+geometry_dir = current_dir.parent.parent / "geometry"
 
 # -------------------------
 # Load the saved registration transform
@@ -32,21 +32,13 @@ secondary_objects = [
     str(geometry_dir / "Mandible_Solid_Smooth_Remeshed_Cartilage_Right.obj"),
     str(geometry_dir / "Mandible_Solid_Smooth_remeshed_Condyle_Left.obj"),
     str(geometry_dir / "Mandible_Solid_Smooth_remeshed_Condyle_Right.obj"),
-    str(geometry_dir / "Mandible_Solid_Smooth_Remeshed_With_Cartilage_Resected_Left.obj"),
-    str(geometry_dir / "Mandible_Solid_Smooth_Remeshed_With_Cartilage_Resected_Right.obj"),
+    str(geometry_dir / "resected_mandible_l_opt_remeshed.obj"),
+    str(geometry_dir / "resected_mandible_r_opt_remeshed.obj"),
     str(geometry_dir / "Maxilla_Solid_Smooth_Remeshed_Cartilage_Left.obj"),
     str(geometry_dir / "Maxilla_Solid_Smooth_Remeshed_Cartilage_Right.obj"),
-    str(geometry_dir / "Donor_Solid_Smooth_Remehsed.obj"),
-    str(geometry_dir / "Plate_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw0_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw1_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw2_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw3_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw4_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw5_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Screw6_Solid_Smooth_Remeshed.obj"),
-    str(geometry_dir / "Disc_Solid_Smooth_Remeshed_Left.obj"),
-    str(geometry_dir / "Disc_Solid_Smooth_Remeshed_Right.obj")
+    str(geometry_dir / "donor_opt0_remeshed.obj"),
+    str(geometry_dir / "plate_opt.obj"),
+    str(geometry_dir / "screw_opt0_remeshed.obj")
 ]
 
 

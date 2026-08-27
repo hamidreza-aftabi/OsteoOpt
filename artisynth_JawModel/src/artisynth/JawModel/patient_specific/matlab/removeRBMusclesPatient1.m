@@ -1,7 +1,7 @@
 
-muscleList = fullfile('..', 'geometry', 'muscleList.txt');
-muscleInfo = fullfile('..', 'geometry', 'muscleInfo.txt');
-closerMuscleList = fullfile('..', 'geometry', 'closerMuscleList.txt');
+muscleList = fullfile('..', '..', 'geometry', 'muscleList.txt');
+muscleInfo = fullfile('..', '..', 'geometry', 'muscleInfo.txt');
+closerMuscleList = fullfile('..', '..', 'geometry', 'closerMuscleList.txt');
 
 muscleNames = {
     'rad', 'rpm', 'rsm', 'rdm', 'rmp' ,'ram'

@@ -4,12 +4,12 @@ from pathlib import Path
 # Get the current directory as a Path object
 current_dir = Path().resolve()
 
-# Assume the "geometry" folder is one level up from the current directory
-geometry_dir = current_dir.parent / "geometry"
+# Assume the "geometry" folder is two levels up from the current directory
+geometry_dir = current_dir.parent.parent / "geometry"
 
 # List of files to be remeshed with specific target lengths
 file_list = {
-    'Hollowed_Rigid_Registered_Donor_Solid_Smooth_Remehsed.obj': 0.50,
+    'Hollowed_Simplified_Rigid_Registered_donor_opt0_remeshed.obj': 0.50,
 }
 
 for file_name, target_length in file_list.items():

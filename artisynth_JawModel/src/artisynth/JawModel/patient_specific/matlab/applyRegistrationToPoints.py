@@ -163,7 +163,7 @@ def transform_muscle_points(info_file, points_file, output_file, mandible_weight
 # Main Execution
 if __name__ == "__main__":
     current_dir = Path().resolve()
-    geometry_dir = current_dir.parent / "geometry"
+    geometry_dir = current_dir.parent.parent / "geometry"
 
     mandible_weights_file = current_dir / "deformation_weights_mandible.json"
     maxilla_weights_file = current_dir / "deformation_weights_maxilla.json"

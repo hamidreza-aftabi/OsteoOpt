@@ -4,7 +4,7 @@ import maspack.geometry.*;
 
 %% Define file paths
 % Change these paths as needed
-muscleInfoFile = '../geometry/muscleInfo.txt';  % Path to muscleInfo.txt
+muscleInfoFile = '../../geometry/muscleInfo.txt';  % Path to muscleInfo.txt
 outputFile     = 'closest_vertex.txt';          % Output file for results
 
 %% Read muscleInfo.txt line by line

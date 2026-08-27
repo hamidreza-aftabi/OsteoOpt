@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -9,11 +10,10 @@ from scipy.spatial import cKDTree
 # ============================================================
 # Fixed configuration (edit here only)
 # ============================================================
-# Allowed: "left" or "right"
-SIDE = "right"
+SIDE = os.environ.get("TMJ_SIDE", "left").strip().lower()
 
 CURRENT_DIR = Path().resolve()
-GEOMETRY_DIR = CURRENT_DIR.parent / "geometry"
+GEOMETRY_DIR = CURRENT_DIR.parent.parent / "geometry"
 
 # File paths (edit here)
 if SIDE.lower() == "right":

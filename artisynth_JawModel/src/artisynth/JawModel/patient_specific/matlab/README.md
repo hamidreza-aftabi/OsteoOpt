@@ -1,51 +1,123 @@
-# Patient-Specific Registration and Model Construction
+# Patient-Specific Registration
 
-Entry point:
+This pipeline registers patient geometry, adapts both TMJs, and updates the
+ArtiSynth jaw-model muscles and ligaments.
+
+## Inputs
+
+Run the pipeline from:
+
+```text
+artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/
+```
+
+Place these files in `inputs/`:
+
+- `CT.nrrd`
+- `SCSA_landmarks.json`
+
+`SCSA_landmarks.json` must use RAS or LPS coordinates in millimetres and contain:
+
+```text
+F_2-1
+F_2-2
+F_2-3
+Mandible Angle-1
+Mandible Angle-2
+Lateral Pole-1
+Lateral Pole-2
+```
+
+The following files are read from `../../geometry/`:
+
+```text
+skull_with_cartilage.obj
+mandible_with_cartilage.obj
+cartilage_skull_left.obj
+cartilage_skull_right.obj
+cartilage_mandible_left.obj
+cartilage_mandible_right.obj
+disc_left.obj
+disc_right.obj
+caps_l_v11.obj
+caps_r_v19.obj
+Maxilla_Solid_Smooth_Remeshed_With_Cartilage.obj
+Mandible_Solid_Smooth_Remeshed_With_Cartilage.obj
+Maxilla_Solid_Smooth_Remeshed_Cartilage_Left.obj
+Maxilla_Solid_Smooth_Remeshed_Cartilage_Right.obj
+Mandible_Solid_Smooth_Remeshed_Cartilage_Left.obj
+Mandible_Solid_Smooth_Remeshed_Cartilage_Right.obj
+Mandible_Solid_Smooth_remeshed_Condyle_Left.obj
+Mandible_Solid_Smooth_remeshed_Condyle_Right.obj
+resected_mandible_l_opt_remeshed.obj
+resected_mandible_r_opt_remeshed.obj
+donor_opt0_remeshed.obj
+plate_opt.obj
+screw_opt0_remeshed.obj
+muscleList.txt
+muscleInfo.txt
+closerMuscleList.txt
+```
+
+## SCSA
+
+`generateSCSA.py` runs TotalSegmentator `head_muscles` through headless 3D
+Slicer and calculates bilateral temporalis, masseter, medial-pterygoid, and
+lateral-pterygoid SCSA.
+
+- Ma/MP: 30 degrees to the Frankfort horizontal plane and translated 25 mm
+  anterosuperiorly.
+- Temporalis: translated 10 mm superior to the Frankfort horizontal plane.
+- Lateral pterygoid: perpendicular to the Frankfort horizontal plane and
+  translated 10 mm anteriorly.
+
+Neighboring-plane sampling is off by default:
+
+```matlab
+useNeighboringScsPlanes = false;
+```
+
+Set it to `true` to measure the reference plane and ten parallel planes at
+1--5 mm on each side and retain the largest area. `SCSA.txt` is written in cm²
+in this order:
+
+```text
+T_R, T_L, Ma_R, Ma_L, MP_R, MP_L, LP_R, LP_L
+```
+
+## Run
+
+Set `ARTISYNTH_HOME` and `SLICER_EXECUTABLE`, set this folder as the MATLAB
+current folder, and run:
 
 ```matlab
 Registration_Artisynth_Main
 ```
 
-This folder contains the patient-specific registration and model-construction
-preprocessing layer for OsteoOpt++. It builds a patient-specific ArtiSynth model
-once, then the resulting digital twin can be used by the existing optimization
-workflow.
+The pipeline performs rigid and deformable registration, bilateral condyle and
+fossa registration, dual deformation of both discs and capsules, donor
+remeshing, and patient-specific muscle and ligament updates.
 
-## What This Pipeline Does
+Default model:
 
-1. Computes a maxilla-based rigid initialization.
-2. Applies the rigid transform to mandible, maxilla, donor, plate, screw, and
-   TMJ geometry.
-3. Estimates deformable CPD fields for mandible and maxilla/skull surfaces.
-4. Registers condyle/fossa regions and applies anatomy-guided disc and capsule
-   adaptation.
-5. Updates muscle insertion/origin landmarks, hyoid position, condyle markers,
-   ligament markers, muscle length parameters, SCSA-derived muscle forces, and
-   ligament rest lengths.
-
-## Required Local Inputs
-
-Before running, place the patient geometry inputs in:
-
-```text
-../geometry/
+```matlab
+ah1 = artisynth('-model', 'artisynth.JawModel.JawFemDemoOptimize');
 ```
 
-Create a local `SCSA.txt` beside these scripts using `SCSA.example.txt` as the
-format. `calculateFMAX.m` converts CT-derived SCSA values to `FMAX.txt`, and
-`modifyFMAX.m` applies those forces to the ArtiSynth muscles.
+Two-segment model:
 
-Use the Anaconda Python environment configured in the root README. The Python
-libraries called from MATLAB are listed in `requirements.txt`, including the
-PyMeshLab API and `pycpd` from `https://github.com/siavashk/pycpd`.
+```matlab
+ah1 = artisynth('-model', 'artisynth.JawModel.JawFemDemoOptimizeTwoWithSafety');
+```
 
-## Notes
+## Outputs
 
-- `Registration_Artisynth_Main.m` uses `ARTISYNTH_HOME`; set that environment
-  variable to the local `artisynth_core` checkout before opening MATLAB.
-- `modelClassName` in `Registration_Artisynth_Main.m` should point to the
-  ArtiSynth model class for the patient-specific case.
-- `deformableRegistration_disc.py` is the reusable CPD registration helper for
-  condyle/fossa targets. Generate the needed `registration_pipeline_*.json`
-  files for the relevant side before running downstream dual disc and capsule
-  deformation.
+Registered meshes are written to `../../geometry/`. Main local outputs include:
+
+```text
+SCSA.txt
+WPCSA.txt
+BPCSA.txt
+Final_PCSA.txt
+FMAX.txt
+```

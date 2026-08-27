@@ -8,7 +8,7 @@ import json
 # Setup file paths
 # -------------------------
 current_dir = Path().resolve()
-geometry_dir = current_dir.parent / "geometry"
+geometry_dir = current_dir.parent.parent / "geometry"
 
 target_path = str(geometry_dir / "skull_with_cartilage.obj")
 source_path = str(geometry_dir / "Maxilla_Solid_Smooth_Remeshed_With_Cartilage.obj")

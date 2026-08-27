@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import trimesh
 from pycpd import DeformableRegistration, AffineRegistration, RigidRegistration
@@ -19,13 +20,44 @@ np.random.seed(0)
 # Paths
 # ============================================================
 current_dir = Path().resolve()
-geometry_dir = current_dir.parent / "geometry"
+geometry_dir = current_dir.parent.parent / "geometry"
 
+SIDE = os.environ.get("TMJ_SIDE", "left").strip().lower()
+REGION = os.environ.get("TMJ_REGION", "fossa").strip().lower()
 
-source_path = str(geometry_dir / "cartilage_skull_left.obj")
-target_path = str(geometry_dir / "Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_Cartilage_left.obj")
-out_path = str(geometry_dir / "fossa_left_deformed_fixed.obj")
-params_file = str(current_dir / "registration_pipeline_fossa_left.json")
+if SIDE not in {"left", "right"}:
+    raise ValueError("TMJ_SIDE must be 'left' or 'right'")
+if REGION not in {"condyle", "fossa"}:
+    raise ValueError("TMJ_REGION must be 'condyle' or 'fossa'")
+
+REGISTRATION_SETTINGS = {
+    "left": {
+        "condyle": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+        "fossa": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+    },
+    "right": {
+        "condyle": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+        "fossa": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+    },
+}
+
+side_label = SIDE.capitalize()
+if REGION == "condyle":
+    source_path = str(geometry_dir / f"cartilage_mandible_{SIDE}.obj")
+    target_path = str(
+        geometry_dir
+        / f"Rigid_Registered_Mandible_Solid_Smooth_remeshed_Condyle_{side_label}.obj"
+    )
+else:
+    source_path = str(geometry_dir / f"cartilage_skull_{SIDE}.obj")
+    target_path = str(
+        geometry_dir
+        / f"Rigid_Registered_Maxilla_Solid_Smooth_Remeshed_Cartilage_{side_label}.obj"
+    )
+
+out_path = str(geometry_dir / f"{REGION}_{SIDE}_deformed_fixed.obj")
+params_file = str(current_dir / f"registration_pipeline_{REGION}_{SIDE}.json")
+registration_settings = REGISTRATION_SETTINGS[SIDE][REGION]
 
 
 # ============================================================
@@ -253,8 +285,13 @@ if ENABLE_DEFORMABLE:
     # - coarse stage handles broad mismatch
     # - fine stage adds more local correction
     all_deform_stages = [
-        {"name": "coarse", "alpha": 2.0, "beta": 3, "max_iter": 150},
-        {"name": "fine",   "alpha": 4.0, "beta": 2, "max_iter": 150},
+        {
+            "name": "coarse",
+            "alpha": registration_settings["alpha"],
+            "beta": registration_settings["beta"],
+            "max_iter": registration_settings["max_iter"],
+        },
+        {"name": "fine", "alpha": 4.0, "beta": 2.0, "max_iter": 150},
     ]
 
     # If disabled, run only the first stage from the list above.

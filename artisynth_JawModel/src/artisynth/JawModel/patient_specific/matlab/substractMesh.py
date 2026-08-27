@@ -2,18 +2,17 @@ import pymeshlab
 from pathlib import Path
 
 # Setup directories:
-# Assumes the "geometry" folder is one level up from the current directory.
+# Assumes the "geometry" folder is two levels up from the current directory.
 current_dir = Path().resolve()
-geometry_dir = current_dir.parent / "geometry"
+geometry_dir = current_dir.parent.parent / "geometry"
 
 # Define the primary mesh filename and its path.
-primary_mesh_filename = "Rigid_Registered_Donor_Solid_Smooth_Remehsed.obj"
+primary_mesh_filename = "Simplified_Rigid_Registered_donor_opt0_remeshed.obj"
 primary_mesh_path = geometry_dir / primary_mesh_filename
 
 # Define a list of subtractive mesh filenames.
 subtractive_mesh_filenames = [
-    "Rigid_Registered_Screw3_Solid_Smooth_Remeshed.obj",
-    "Rigid_Registered_Screw4_Solid_Smooth_Remeshed.obj"
+    "Rigid_Registered_screw_opt0_remeshed.obj"
 ]
 
 # Load the primary mesh into a MeshSet (ms_primary).

@@ -1,5 +1,5 @@
 % Define the file path to the muscle list.
-muscleListFile = fullfile('..', 'geometry', 'muscleList.txt');
+muscleListFile = fullfile('..', '..', 'geometry', 'muscleList.txt');
 
 % Open the file for reading.
 fid = fopen(muscleListFile, 'r');

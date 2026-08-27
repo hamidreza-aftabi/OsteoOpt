@@ -14,8 +14,8 @@ jsonData = jsondecode(str);
 translation = [jsonData.translation(1), jsonData.translation(2), jsonData.translation(3)];
 scaling = jsonData.scaling;  % Uniform scaling factor
 
-% Path to muscleInfo.txt file (one folder back, then geometry folder)
-muscleInfoFile = '../geometry/muscleInfo.txt';
+% Path to muscleInfo.txt file (two folders back, then geometry folder)
+muscleInfoFile = '../../geometry/muscleInfo.txt';
 fid = fopen(muscleInfoFile, 'r');
 if fid == -1
     error('Could not open muscleInfo.txt file at %s', muscleInfoFile);

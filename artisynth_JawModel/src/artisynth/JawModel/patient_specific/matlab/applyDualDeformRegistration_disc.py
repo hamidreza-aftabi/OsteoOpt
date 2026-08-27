@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import trimesh
 from scipy.spatial import cKDTree
@@ -15,26 +16,46 @@ ENABLE_DUAL_DEFORMABLE = True
 # Paths
 # ============================================================
 current_dir = Path().resolve()
-geometry_dir = current_dir.parent / "geometry"
+geometry_dir = current_dir.parent.parent / "geometry"
 
-disc_path = str(geometry_dir / "disc_right.obj")
-condyle_params_file = str(current_dir / "registration_pipeline_condyle_right.json")
-fossa_params_file = str(current_dir / "registration_pipeline_fossa_right.json")
-out_path = str(geometry_dir / "disc_dual_deformed_right.obj")
+SIDE = os.environ.get("TMJ_SIDE", "left").strip().lower()
+if SIDE not in {"left", "right"}:
+    raise ValueError("TMJ_SIDE must be 'left' or 'right'")
+
+disc_path = str(geometry_dir / f"disc_{SIDE}.obj")
+condyle_params_file = str(current_dir / f"registration_pipeline_condyle_{SIDE}.json")
+fossa_params_file = str(current_dir / f"registration_pipeline_fossa_{SIDE}.json")
+out_path = str(geometry_dir / f"disc_dual_deformed_{SIDE}.obj")
 
 # ============================================================
 # Weighting params
 # ============================================================
-K_NEIGHBORS = 20
-WEIGHT_POWER = .5
 EPS = 1e-8
 CHUNK_SIZE = 5000
 
 # Manual influence adjustment
 # > 1.0 = stronger influence
 # < 1.0 = weaker influence
-CONDYLE_WEIGHT_FACTOR = 1
-FOSSA_WEIGHT_FACTOR = 1
+SIDE_SETTINGS = {
+    "left": {
+        "k_neighbors": 20,
+        "weight_power": 0.5,
+        "condyle_weight_factor": 1.0,
+        "fossa_weight_factor": 1.0,
+    },
+    "right": {
+        "k_neighbors": 20,
+        "weight_power": 0.5,
+        "condyle_weight_factor": 1.0,
+        "fossa_weight_factor": 1.0,
+    },
+}
+
+side_settings = SIDE_SETTINGS[SIDE]
+K_NEIGHBORS = side_settings["k_neighbors"]
+WEIGHT_POWER = side_settings["weight_power"]
+CONDYLE_WEIGHT_FACTOR = side_settings["condyle_weight_factor"]
+FOSSA_WEIGHT_FACTOR = side_settings["fossa_weight_factor"]
 
 
 # ============================================================

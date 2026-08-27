@@ -5,12 +5,12 @@ from pathlib import Path
 # Get the current directory as a Path object
 current_dir = Path().resolve()
 
-# Assume the "geometry" folder is one level up from the current directory
-geometry_dir = current_dir.parent / "geometry"
+# Assume the "geometry" folder is two levels up from the current directory
+geometry_dir = current_dir.parent.parent / "geometry"
 
 # Define the input and output file paths
-input_mesh_path = geometry_dir / "Rigid_Registered_Donor_Solid_Smooth_Remehsed.obj"
-output_mesh_path = geometry_dir / "Simplified_Rigid_Registered_Donor_Solid_Smooth_Remehsed.obj"
+input_mesh_path = geometry_dir / "Rigid_Registered_donor_opt0_remeshed.obj"
+output_mesh_path = geometry_dir / "Simplified_Rigid_Registered_donor_opt0_remeshed.obj"
 
 # Parameters for decimation
 num_passes = 2         # Define the number of decimation passes to perform
