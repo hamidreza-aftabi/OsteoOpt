@@ -13,13 +13,12 @@ variables that improve predicted donor-host bone union.
 Extended version: [OsteoOpt++ arXiv:2605.01084v1](https://arxiv.org/abs/2605.01084v1).
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
-## To-Do List
+## Updates
 
-* [x] ~~Fix bugs in the two cost functions.~~
-* [x] ~~Fix bugs in the capsule-based dual deformable registration.~~
-* [ ] Provide example geometry files and document the component-naming conventions.
-* [ ] Add the complete segmentation code for the four masticatory muscles.
-* [ ] Add the resection-plane definition for PCSA calculation.
+* **August 17, 2026** - Extended version accepted in *Medical Image Analysis* (Impact Factor: 14).
+* **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award.
+* **August 27, 2025** - Shortlisted for the MICCAI 2025 Best Paper and Young Scientist Awards.
+* **May 12, 2025** - Early accepted to MICCAI 2025 (top 9% of approximately 3,700 submissions).
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
@@ -65,6 +64,8 @@ Patient-specific registration entry point:
 artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/Registration_Artisynth_Main.m
 ```
 
+See the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md) for detailed inputs and configuration.
+
 ## Setup
 
 Tested on Windows.
@@ -93,17 +94,12 @@ Tested on Windows.
    ```bash
    conda create -n osteoopt python=3.8
    conda activate osteoopt
-   pip install -r artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/requirements.txt
+   pip install -r requirements.txt
    ```
 
    ```matlab
    pyenv('Version', 'C:\path\to\anaconda3\envs\osteoopt\python.exe')
    ```
-
-Patient-specific muscle-force estimation also requires CT muscle segmentation
-and scan cross-section analysis before running the registration/model-construction
-script. **The CT muscle segmentation and scan cross-section code will be added
-soon.**
 
 ## Running
 
@@ -127,12 +123,14 @@ For patient-specific registration/model construction, open MATLAB in:
 artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab
 ```
 
-Place the required patient geometry inputs in `../geometry`, create a local
-`SCSA.txt` from `SCSA.example.txt`, and run:
+Place the required patient geometry inputs in `../../geometry`, place `CT.nrrd`
+and `SCSA_landmarks.json` in `inputs/`, and run:
 
 ```matlab
 Registration_Artisynth_Main
 ```
+
+See the [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md) for detailed inputs and configuration.
 
 ## Citation
 
