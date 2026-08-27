@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2605.01084-b31b1b.svg)](https://arxiv.org/abs/2605.01084)
 [![arXiv version](https://img.shields.io/badge/arXiv%20version-v1-b31b1b.svg)](https://arxiv.org/abs/2605.01084v1)
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-under%20reconstruction-yellow.svg)](#)
+[![Status](https://img.shields.io/badge/status-active%20development-brightgreen.svg)](#)
 
 OsteoOpt++ is the extended version of OsteoOpt, an image-to-decision
 framework for mandibular reconstruction. It combines virtual surgical planning,
