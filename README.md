@@ -17,7 +17,7 @@ Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/
 ## News and Highlights 🎉
 
 * **August 17, 2026** - Extended version accepted in *Medical Image Analysis* (Impact Factor: 14).
-* **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award.
+* **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award 🏆.
 * **August 27, 2025** - Shortlisted for the MICCAI 2025 Best Paper and Young Scientist Awards.
 * **May 12, 2025** - Early accepted to MICCAI 2025 (top 9% of approximately 3,700 submissions).
 
