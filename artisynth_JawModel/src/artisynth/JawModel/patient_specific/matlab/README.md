@@ -3,6 +3,41 @@
 This pipeline registers patient geometry, adapts both TMJs, and updates the
 ArtiSynth jaw-model muscles and ligaments.
 
+## Software setup
+
+The workflow uses two separate Python environments:
+
+1. **MATLAB Python environment:** used by the registration and mesh-processing
+   scripts called with `pyrunfile`. From the repository root, install:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   Configure MATLAB to use this environment with `pyenv`.
+
+2. **3D Slicer Python environment:** used only by `generateSCSA.py`. Install 3D
+   Slicer, install the TotalSegmentator extension from the Extension Manager,
+   accept its extension dependencies, and initialize its Python dependencies
+   once when prompted. PyTorch, nnUNet, TotalSegmentator, `slicer`, and VTK are
+   provided inside Slicer and should not be added to the repository
+   `requirements.txt`.
+
+   This is the recommended and easier setup because the TotalSegmentator
+   extension installs and manages its required dependencies. A fully
+   independent PyTorch environment is possible, but it would require a separate
+   non-Slicer implementation of `generateSCSA.py`.
+
+Set the required paths before running MATLAB:
+
+```matlab
+setenv('ARTISYNTH_HOME', 'C:\path\to\artisynth_core');
+setenv('SLICER_EXECUTABLE', 'C:\path\to\Slicer.exe');
+```
+
+After this one-time setup, MATLAB runs `generateSCSA.py` through Slicer in
+headless mode.
+
 ## Inputs
 
 Run the pipeline from:
