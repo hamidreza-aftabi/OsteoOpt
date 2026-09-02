@@ -23,7 +23,7 @@ Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/
 
 ## TODO
 
-- [ ] Fix screw-placement descriptions for the different defect types after the latest update.
+- [ ] Fix screw-placement descriptions and code input for the different defect types after the latest update.
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
