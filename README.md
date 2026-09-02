@@ -21,6 +21,10 @@ Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/
 * **August 27, 2025** - Shortlisted for the MICCAI 2025 Best Paper and Young Scientist Awards.
 * **May 12, 2025** - Early accepted to MICCAI 2025 (top 9% of approximately 3,700 submissions).
 
+## TODO
+
+- [ ] Fix screw-placement descriptions for the different defect types after the latest update.
+
 **Demo: one optimization iteration for the Body (B) defect case.**
 
 https://github.com/user-attachments/assets/8453a34e-4e47-47cb-96e5-db6c425aa94e
