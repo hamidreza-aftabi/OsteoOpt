@@ -9,7 +9,7 @@ ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
 
 Extended Journal version: [*Medical Image Analysis*](https://www.sciencedirect.com/science/article/pii/S1361841526003506).
-Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
+Earlier conference version: [MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
 ## News and Highlights 🎉
 
