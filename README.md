@@ -1,7 +1,5 @@
 # OsteoOpt++: Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union
 
-[![arXiv](https://img.shields.io/badge/arXiv-2605.01084-b31b1b.svg)](https://arxiv.org/abs/2605.01084)
-[![arXiv version](https://img.shields.io/badge/arXiv%20version-v1-b31b1b.svg)](https://arxiv.org/abs/2605.01084v1)
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active%20development-brightgreen.svg)](#)
 
@@ -10,14 +8,14 @@ framework for mandibular reconstruction. It combines virtual surgical planning,
 ArtiSynth simulation, and Bayesian optimization to search reconstruction
 variables that improve predicted donor-host bone union.
 
-Extended Journal version: accepted in *Medical Image Analysis*; link will be added soon.
+Extended Journal version: [*Medical Image Analysis*](https://www.sciencedirect.com/science/article/pii/S1361841526003506).
 Earlier conference version: [OsteoOpt MICCAI 2025](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery).
 
 ## News and Highlights 🎉
 
 * **August 17, 2026** - Extended version accepted in *Medical Image Analysis* (Impact Factor: 14).
 * **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award 🏆.
-* **August 27, 2025** -  Nominated for the MICCAI 2025 Best Paper and Young Scientist Awards.
+* **August 27, 2025** - Nominated for the MICCAI 2025 Best Paper and Young Scientist Awards.
 * **May 12, 2025** - Early accepted to MICCAI 2025 (top 9% of approximately 3,700 submissions).
 
 ## TODO
@@ -139,17 +137,16 @@ For optimization-only or registration-plus-optimization geometry files, check [`
 
 ## Citation
 
-If you use OsteoOpt++, please cite the extended arXiv version:
+If you use OsteoOpt++, please cite the journal version:
 
 ```bibtex
-@misc{aftabi2026patient,
-  title = {Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union},
+@article{aftabi2026patient,
+  title = {Towards Patient-Specific Optimization for Mandibular Reconstruction Planning Based on Predicted Bone-Union Propensity},
   author = {Aftabi, Hamidreza and Lloyd, John E. and Ding, Amanda and Sagl, Benedikt and Prisman, Eitan and Hodgson, Antony and Fels, Sidney},
+  journal = {Medical Image Analysis},
   year = {2026},
-  eprint = {2605.01084},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  url = {https://arxiv.org/abs/2605.01084}
+  doi = {10.1016/j.media.2026.104281},
+  url = {https://www.sciencedirect.com/science/article/pii/S1361841526003506}
 }
 ```
 
