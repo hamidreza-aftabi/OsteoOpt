@@ -13,6 +13,7 @@ Earlier conference version: [MICCAI 2025](https://www.researchgate.net/publicati
 
 ## News and Highlights 🎉
 
+* **September 30, 2026** - Received the *Medical Image Analysis* Best Paper Runner-Up Award 🥈.
 * **August 17, 2026** - Extended version accepted in *Medical Image Analysis* (Impact Factor: 14).
 * **September 26, 2025** - Received the MICCAI 2025 Young Scientist Award 🏆.
 * **August 27, 2025** - Nominated for the MICCAI 2025 Best Paper and Young Scientist Awards.
