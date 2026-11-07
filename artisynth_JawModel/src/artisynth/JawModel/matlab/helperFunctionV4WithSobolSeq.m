@@ -46,7 +46,7 @@ function results = helperFunctionV4WithSobolSeq(results, currentIteration)
     additionalTable = array2table(scaledSamples, 'VariableNames', varsNames);
     
     % Convert the initial points to a table
-    %initialTablePoint = array2table(initialPoints, 'VariableNames', varsNames);
+    initialTablePoint = array2table(initialPoints, 'VariableNames', varsNames);
     
     % Combine the initial point with the Sobol-generated points
     initialTable = [initialTablePoint; additionalTable];    
