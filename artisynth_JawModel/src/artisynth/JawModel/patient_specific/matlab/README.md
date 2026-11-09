@@ -117,6 +117,27 @@ in this order:
 T_R, T_L, Ma_R, Ma_L, MP_R, MP_L, LP_R, LP_L
 ```
 
+
+## Patient-Specific Deformable Registration and TMJ Adaptation
+
+The deformable registration and TMJ disc/capsule adaptation parameters should be fine-tuned for each patient based on their anatomical geometry.
+
+1. **CPD Registration:** In [deformableRegistration_disc.py](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/deformableRegistration_disc.py), the condyle-side and fossa-side registration parameters (`alpha`, `beta`, and `max_iter`) can be adjusted independently for the left and right TMJs. The default settings are:
+
+   ```python
+   "condyle": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+   "fossa": {"alpha": 2.0, "beta": 3.0, "max_iter": 150},
+   ```
+
+   Here, `alpha` controls deformation regularization, `beta` controls the Gaussian kernel width, and `max_iter` sets the maximum number of iterations. Refer to the Coherent Point Drift (CPD) algorithm for details.
+
+2. **Dual Disc Deformation:** In [applyDualDeformRegistration_disc.py](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/applyDualDeformRegistration_disc.py), `k_neighbors`, `weight_power`, `condyle_weight_factor`, and `fossa_weight_factor` control the spatial blending of condyle-side and fossa-side deformation fields. These parameters should be tuned for each disc to achieve appropriate deformation based on patient-specific TMJ geometry.
+
+3. **Dual Capsule Deformation:** In [applyDualDeformRegistration_capsule.py](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/applyDualDeformRegistration_capsule.py), `K_NEIGHBORS`, `WEIGHT_POWER`, and the condyle/fossa weight factors control deformation blending. Additional parameters, including `attachment_radius_factor`, `directional_distance_falloff_power`, `directional_scale_xyz`, `directional_scale_target`, and `initial_deformation_scale`, control the spatial influence, scaling, and magnitude of capsule deformation. Displacement limits and surface-quality safeguards should also be considered when tuning these parameters for each patient.
+
+Similarly, the CPD `alpha` and `beta` parameters in [deformableRegistration_mand.py](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/deformableRegistration_mand.py) and [deformableRegistration_skull.py](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/deformableRegistration_skull.py) should be adjusted for each patient to improve registration accuracy and muscle attachment positioning in the registered model.
+
+
 ## Run
 
 Set `ARTISYNTH_HOME` and `SLICER_EXECUTABLE`, set this folder as the MATLAB
