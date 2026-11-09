@@ -162,102 +162,86 @@ explains how to select the one-segment or two-segment ArtiSynth model in
 
 ## Editing model settings
 
-The MATLAB workflow, Java screw settings, geometry files, and material
-properties are configured in different files. Keep them consistent with the
-reconstruction you intend to run.
+Keep the MATLAB, screw, geometry, and material settings consistent with the
+selected reconstruction.
 
 ### Segment count and MATLAB defect settings
 
-All files in the following table are in
-`artisynth_JawModel/src/artisynth/JawModel/matlab/`.
-Set `defectType` consistently in the main script, helper function, and
-simulation function for the selected workflow:
+Set `defectType` and `trial` consistently across the files for your workflow:
 
 | Workflow | Files containing `defectType` |
 | --- | --- |
 | One segment: B or S | [`MainOneSegment.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/MainOneSegment.m), [`helperFunctionV4WithSobolSeq.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/helperFunctionV4WithSobolSeq.m), [`runArtisynthSim.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/runArtisynthSim.m) |
 | Two segments: RB | [`MainTwoSegment.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/MainTwoSegment.m), [`helperFunctionTwo.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/helperFunctionTwo.m), [`runArtisynthSimTwo.m`](artisynth_JawModel/src/artisynth/JawModel/matlab/runArtisynthSimTwo.m) |
 
-These files define their own `defectType` values; changing the main script
-does not update the helper function or simulation function. The main script
-uses the value to name results, while the helper and simulation functions
-configure the optimization and reconstruction. Keep `trial` consistent across
-the same files when changing the trial identifier.
+Each file defines its own `defectType`; changing the main script does not
+update the others. The main script labels results, while the helper and
+simulation functions configure optimization and reconstruction.
 
-The simulation functions also set `num_segment` and `num_screws`: the supplied
-one-segment workflow uses `1` and `1`, and the two-segment workflow uses `2`
-and `2`. These scripted screw counts override `DEFAULT_NUM_SCREWS` in Java.
+`runArtisynthSim.m` sets `num_segment` and `num_screws` to `1`;
+`runArtisynthSimTwo.m` sets both to `2`. These scripted screw counts override
+`DEFAULT_NUM_SCREWS` in Java.
 
 ### Screw settings and B/S/RB placement
 
-Edit
-[`PlateBuilder.java`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_VSP/src/artisynth/VSP/reconstruction/PlateBuilder.java)
-to configure defect-specific screw placement. At the top of the class, set:
+In
+[`PlateBuilder.java`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_VSP/src/artisynth/VSP/reconstruction/PlateBuilder.java),
+set the defect selector at the top of the class:
 
 ```java
 private static final ScrewDefectType SCREW_DEFECT_TYPE = ScrewDefectType.B;
 ```
 
 Choose `ScrewDefectType.B`, `ScrewDefectType.S`, or `ScrewDefectType.RB` to
-match the MATLAB defect settings. The direction vectors and first-screw
-position adjustments for each defect are grouped below this selector.
-The second-screw position is defined separately in `buildScrews()`.
+match MATLAB. Direction vectors and first-screw offsets are grouped below the
+selector; the second-screw position is defined separately in `buildScrews()`.
 
-`DEFAULT_NUM_SCREWS` sets the default screw count for manual VSP use. For the
-MATLAB optimization workflows, use the `num_screws` setting in the appropriate
-simulation function as described above.
+`DEFAULT_NUM_SCREWS` sets the default for manual VSP use; MATLAB workflows use
+`num_screws` in the simulation functions above.
 
 ### Body and geometry files
 
-Edit
-[`bodyList.txt`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt)
-to select the rigid-body geometry files loaded by the jaw model:
+Select the rigid-body meshes in
+[`bodyList.txt`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/geometry/bodyList.txt):
 
-- **Optimization only:** use the generic template-model geometry block.
-- **Registration followed by optimization:** use the registration-output
-  block and comment out the optimization-only block. Match the filenames to
-  the outputs produced for the selected reconstruction.
+- **Optimization only:** enable the generic template-model geometry block.
+- **After registration:** enable the registration-output block and disable
+  the optimization-only block.
 
 For one segment, keep `donor_mesh0` and `screw0` active and comment out
-`donor_mesh1` and `screw1`. For two segments, ensure that all four entries are
-present, active, and point to the corresponding mesh files. The simulation
-functions also toggle the second-segment entries, but the geometry source and
-filenames must still be configured correctly.
-
-Also check the donor FEM mesh and plate file paths in the selected Java model
-class below; `bodyList.txt` does not define every FEM input file.
+`donor_mesh1` and `screw1`. For two segments, keep all four entries active.
+The simulation functions also toggle the second-segment entries. Check that
+the mesh filenames match your outputs, and review the donor FEM and plate
+file paths in the Java model below.
 
 ### Material properties
 
-Edit the Java model corresponding to the reconstruction:
+Edit the Java model for the selected reconstruction:
 
 | Reconstruction | Model file |
 | --- | --- |
 | One segment | [`JawFemDemoOptimize.java`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/JawFemDemoOptimize.java) |
 | Two segments | [`JawFemDemoOptimizeTwoWithSafety.java`](https://github.com/hamidreza-aftabi/OsteoOpt/blob/main/artisynth_JawModel/src/artisynth/JawModel/JawFemDemoOptimizeTwoWithSafety.java) |
 
-The material parameters near the beginning of these classes include:
+Parameters near the beginning of these classes include:
 
 - **Cancellous bone:** `CancellousBoneDensity`, `CancellousBoneE`, and
   `CancellousBoneNu`.
 - **Cortical bone:** `corticalBoneDensity`, `corticalBoneYoungModulus`, and
   `corticalBonePoissonRatio`.
-- **Titanium plate and screw density:** `myTitaniumDensity`; the plate's
-  Young's modulus and Poisson's ratio are `myTitaniumE` and `myTitaniumNu`.
-- **Donor contact settings:** `DEFAULT_E`, `DEFAULT_Nu`, `DEFAULT_Damping`,
-  and `DEFAULT_Thickness`.
+- **Titanium:** `myTitaniumDensity` for plate/screw density, and `myTitaniumE`
+  and `myTitaniumNu` for plate elasticity.
+- **Donor contact:** `DEFAULT_E`, `DEFAULT_Nu`, `DEFAULT_Damping`, and
+  `DEFAULT_Thickness`.
 
-Preserve the existing `DENSITY_TO_mmKS` and `PRESSURE_TO_mmKS` conversions when
-entering density and Young's modulus. The separate `corticalAppositionDensity`
-and `cancellousAppositionDensity` parameters are used by the bone-union metric
-and should also be reviewed when changing bone-density assumptions.
+Keep the `DENSITY_TO_mmKS` and `PRESSURE_TO_mmKS` conversions. When changing
+bone-density assumptions, also review `corticalAppositionDensity` and
+`cancellousAppositionDensity`, which are used by the bone-union metric.
 
-Patient-specific registration does not automatically individualize these
-material properties; see the material-properties note in the
+Registration does not individualize material properties; see the
 [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md).
 
-After editing Java settings, rebuild the Java project and reload the
-corresponding ArtiSynth model before running the workflow again.
+After Java edits, rebuild the project and reload the ArtiSynth model.
 
 ## Citation
 
