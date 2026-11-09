@@ -49,6 +49,31 @@ import maspack.util.InternalErrorException;
  */
 public class PlateBuilder extends WorkerComponentBase {
 
+   // SELECT DEFECT TYPE HERE: B, S, or RB
+   private enum ScrewDefectType { B, S, RB }
+   private static final ScrewDefectType SCREW_DEFECT_TYPE = ScrewDefectType.B;
+
+   // B DEFECT
+   private static final Vector3d B_YDIR1 = new Vector3d (
+      -0.8831891864902558, -0.46611507271598007, -0.0520922245028643);
+   private static final Vector3d B_ZDIR1 = new Vector3d (
+       0.44297740956143233, -0.8709352841458438, -0.21270342133600262);
+
+   // S DEFECT
+   private static final double S_Y_POSITION_OFFSET = -10;
+   private static final Vector3d S_YDIR1 = new Vector3d (
+      0, -1, -.2);
+   private static final Vector3d S_ZDIR1 = new Vector3d (
+      0.9821693523530379, -0.1877767306047194, 0.00912484201597602);
+
+   // RB DEFECT
+   private static final double RB_Y_POSITION_OFFSET = 3;
+   private static final double RB_Z_POSITION_OFFSET = -7;
+   private static final Vector3d RB_YDIR1 = new Vector3d (
+      -0.7241536065000872, -0.5816421632264681, 0.017010903582818565);
+   private static final Vector3d RB_ZDIR1 = new Vector3d (
+       0.3011589228424498, -0.8178761688010696, -0.4902875438960889);
+
    // not a property yet ...
    public static int DEFAULT_NUM_PLATE_CURVE_SEGS = 500;
    
@@ -823,16 +848,28 @@ public class PlateBuilder extends WorkerComponentBase {
                //TSW.p.set (new Vector3d (closestPoint0.x, closestPoint0.y, closestPoint0.z));
                //TSW.p.set (new Vector3d (pos0.x, pos0.y, pos0.z));
                
-               //For B Defect 
-               TSW.p.set (new Vector3d ((rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2 ,  (rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y )/2 , (rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z)/2 ));   
-
-               
-               //For S Defect 
-               //TSW.p.set (new Vector3d ((rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2 ,  (rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y - 10)/2 , (rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z)/2 ));   
-
-               
-               //For RB Defect 
-               //TSW.p.set (new Vector3d ((rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2 ,  ((rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y )+3)/2 , ((rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z)-7)/2 ));   
+               switch (SCREW_DEFECT_TYPE) {
+                  case B:
+                     TSW.p.set (new Vector3d (
+                        (rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2,
+                        (rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y)/2,
+                        (rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z)/2));
+                     break;
+                  case S:
+                     TSW.p.set (new Vector3d (
+                        (rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2,
+                        (rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y + S_Y_POSITION_OFFSET)/2,
+                        (rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z)/2));
+                     break;
+                  case RB:
+                     TSW.p.set (new Vector3d (
+                        (rdpMarkers.get (0).getPosition().x + rdpMarkers.get (1).getPosition().x)/2,
+                        ((rdpMarkers.get (0).getPosition().y + rdpMarkers.get (1).getPosition().y) + RB_Y_POSITION_OFFSET)/2,
+                        ((rdpMarkers.get (0).getPosition().z + rdpMarkers.get (1).getPosition().z) + RB_Z_POSITION_OFFSET)/2));
+                     break;
+                  default:
+                     throw new IllegalStateException ("Unsupported screw defect type: " + SCREW_DEFECT_TYPE);
+               }
 
             }
             
@@ -875,23 +912,25 @@ public class PlateBuilder extends WorkerComponentBase {
             System.out.println("Y direction: " + ydir.toString());
             
             
-            //For S Defect 
-            //Vector3d ydir1 = new Vector3d (0, -1, -.2);
-            //Vector3d zdir1 = new Vector3d (0.9821693523530379, -0.1877767306047194, 0.00912484201597602);
-            
+            Vector3d ydir1;
+            Vector3d zdir1;
 
-            
-           // for B Defect
-           
-            Vector3d ydir1 = new Vector3d (-0.8831891864902558, -0.46611507271598007, -0.0520922245028643);
-            Vector3d zdir1 = new Vector3d ( 0.44297740956143233, -0.8709352841458438, -0.21270342133600262);
-           
-            
-            
-           //For RB Defect 
-           
-           //Vector3d ydir1 = new Vector3d (-0.7241536065000872, -0.5816421632264681, 0.017010903582818565);
-           //Vector3d zdir1 = new Vector3d ( 0.3011589228424498, -0.8178761688010696, -0.4902875438960889);
+            switch (SCREW_DEFECT_TYPE) {
+               case B:
+                  ydir1 = new Vector3d (B_YDIR1);
+                  zdir1 = new Vector3d (B_ZDIR1);
+                  break;
+               case S:
+                  ydir1 = new Vector3d (S_YDIR1);
+                  zdir1 = new Vector3d (S_ZDIR1);
+                  break;
+               case RB:
+                  ydir1 = new Vector3d (RB_YDIR1);
+                  zdir1 = new Vector3d (RB_ZDIR1);
+                  break;
+               default:
+                  throw new IllegalStateException ("Unsupported screw defect type: " + SCREW_DEFECT_TYPE);
+            }
            
             
                  
