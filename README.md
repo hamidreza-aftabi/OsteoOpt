@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/badge/status-archived-brightgreen.svg)](#)
 [![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![MATLAB](https://img.shields.io/badge/MATLAB-0076A8.svg)](https://www.mathworks.com/products/matlab.html)
 
 OsteoOpt++ is the extended version of OsteoOpt, an image-to-decision
 framework for mandibular reconstruction. It combines virtual surgical planning,
@@ -50,7 +51,7 @@ artisynth_JawModel/src/artisynth/JawModel/matlab/MainOneSegment.m
 artisynth_JawModel/src/artisynth/JawModel/matlab/MainTwoSegment.m
 ```
 
-## Patient-Specific Modeling
+## Patient-Specific Registration and Modeling
 
 ![Patient-specific modeling pipeline](assets/patient_specific_modeling.jpg)
 
@@ -138,7 +139,7 @@ Run `MainOneSegment.m` for a one-segment reconstruction or `MainTwoSegment.m`
 for a two-segment reconstruction. The supplied one-segment examples use B or S
 defects; the two-segment example is configured for RB.
 
-### Patient-specific registration
+### Patient-specific registration and Modeling
 
 Prepare the inputs described in the
 [registration README](artisynth_JawModel/src/artisynth/JawModel/patient_specific/matlab/README.md),
