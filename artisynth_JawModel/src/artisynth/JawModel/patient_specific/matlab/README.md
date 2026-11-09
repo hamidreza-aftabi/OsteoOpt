@@ -153,3 +153,5 @@ BPCSA.txt
 Final_PCSA.txt
 FMAX.txt
 ```
+
+**Important Note:** The material properties used in the patient-specific registration pipeline are inherited from the generic ArtiSynth jaw model and are not individualized for each patient, as this pipeline is intended solely for demonstration purposes. Patient-specific material properties would require estimation based on each patient's CT data, as reported in the paper.
