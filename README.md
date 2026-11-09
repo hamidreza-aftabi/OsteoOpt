@@ -19,9 +19,6 @@ Earlier conference version: [MICCAI 2025](https://www.researchgate.net/publicati
 * **August 27, 2025** - Nominated for the MICCAI 2025 Best Paper and Young Scientist Awards.
 * **May 12, 2025** - Early accepted to MICCAI 2025 (top 9% of approximately 3,700 submissions).
 
-## TODO
-
-- [ ] Fix screw-placement descriptions and code input for the different defect types after the latest update.
 
 **Demo: one optimization iteration for the Body (B) defect case.**
 
