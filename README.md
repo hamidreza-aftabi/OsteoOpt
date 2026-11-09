@@ -1,10 +1,10 @@
 # OsteoOpt++: Patient-Specific Optimization for Mandibular Reconstruction Planning with Enhanced Bone Union
 
 [![License](https://img.shields.io/badge/license-PolyForm%20NC%201.0.0-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-archived-brightgreen.svg)](#)
 [![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![MATLAB](https://img.shields.io/badge/MATLAB-0076A8.svg)](https://www.mathworks.com/products/matlab.html)
+[![Status](https://img.shields.io/badge/status-archived-brightgreen.svg)](#)
 
 OsteoOpt++ is the extended version of OsteoOpt, an image-to-decision
 framework for mandibular reconstruction. It combines virtual surgical planning,
