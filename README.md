@@ -258,8 +258,7 @@ If you use OsteoOpt++, please cite the journal version:
 }
 ```
 
-Please also cite the earlier OsteoOpt MICCAI conference paper
-([ResearchGate](https://www.researchgate.net/publication/395706192_OsteoOpt_A_Bayesian_Optimization_Framework_for_Enhancing_Bone_Union_Likelihood_in_Mandibular_Reconstruction_Surgery)):
+Please also cite the earlier OsteoOpt MICCAI conference paper:
 
 ```bibtex
 @inproceedings{aftabi2025osteoopt,
