@@ -154,4 +154,7 @@ Final_PCSA.txt
 FMAX.txt
 ```
 
-**Important Note:** The material properties used in the patient-specific registration pipeline are inherited from the generic ArtiSynth jaw model and are not individualized for each patient, as this pipeline is intended solely for demonstration purposes. Patient-specific material properties would require estimation based on each patient's CT data, as reported in the paper.
+**Important Notes:**
+1. **Material Properties:** The material properties used in the patient-specific registration pipeline are inherited from the generic ArtiSynth jaw model and are not individualized for each patient, as this pipeline is intended solely for demonstration purposes. Patient-specific material properties would require estimation based on each patient's CT data, as reported in the paper.
+
+2. **Muscle and Ligament Removal:** The functions `removeRBMusclesPatient1` and `removeLigamentsPatient1` in `Registration_Artisynth_Main.m` are examples of muscle and ligament removal for a patient with an RB (ramus-body) scapular reconstruction defect. These functions can be adjusted for different patients based on their specific defect configurations and anatomical conditions and are provided for demonstration purposes only.
